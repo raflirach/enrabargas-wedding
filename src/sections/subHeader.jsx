@@ -4,17 +4,17 @@ export default function SubHeader() {
       <div className="absolute inset-0 bg-fixed bg-cover"></div>
       <div className="relative z-10 py-20 px-8 grid place-items-center text-xl italic">
         <div
-          className="p-4 border-t-2 border-solid border-opacity-100 border-r-0 border-b-0 border-l-0 relative"
+          className="p-8 border-t-2 border-solid border-opacity-100 border-r-0 border-b-0 border-l-0 relative"
           style={{
             borderImage:
-              "linear-gradient(to right, #146C94 40%, transparent 60%) 100% 1",
+              "linear-gradient(to right, #FCDEC0 40%, transparent 60%) 100% 1",
           }}
         >
           <div
-            className="p-4 absolute bottom-0 left-0 right-0 border-b-2 border-solid border-opacity-100"
+            className="p-8 absolute bottom-0 left-0 right-0 border-b-2 border-solid border-opacity-100"
             style={{
               borderImage:
-                "linear-gradient(to left, #146C94 40%, transparent 60%) 100% 1",
+                "linear-gradient(to left, #FCDEC0 40%, transparent 60%) 100% 1",
             }}
           ></div>
           “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan

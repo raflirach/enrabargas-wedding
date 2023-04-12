@@ -11,9 +11,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#F6F1F1",
-        primary: "#19A7CE",
-        secondary: "#146C94"
+        background: "#7D5A50",
+        primary: "#FCDEC0",
+        secondary: "#B4846C"
+      },
+      fontFamily: {
+        alice: ["Alice", "serif"],
+        fira: ['Fira Sans', "sans-serif"]
       },
     },
   },

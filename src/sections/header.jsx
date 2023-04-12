@@ -1,5 +1,13 @@
 import { useTransition, animated } from "@react-spring/web";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { CountdownTimer } from "../components/countDownTimer";
+import {
+  dateGetDate,
+  dateGetDay,
+  dateGetMonth,
+  dateGetYear,
+  getTargetDate,
+} from "@/helpers/formatDate";
 
 const slides = [
   "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
@@ -22,6 +30,7 @@ export default function Header() {
     },
     exitBeforeEnter: true,
   });
+
   return (
     <div className="relative" id="home">
       {transitions((style, i) => (
@@ -36,17 +45,22 @@ export default function Header() {
           }}
         />
       ))}
-      <div className="relative z-10 h-screen grid place-items-center">
-        <div className="glass w-3/4 py-2 px-2 rounded-lg">
-          <div>The Wedding Of</div>
-          <div className="text-4xl mb-4">Rafli & Icha</div>
-          <div className="flex justify-between">
-            <div className="p-2 border-t border-primary w-full h-full">
-              <div>Save the date</div>
-              <div>15 Juli 2023</div>
-            </div>
-            <div className="p-2 border-b border-primary w-full h-full">
-              Kanan
+      <div className="relative z-10 h-screen grid place-items-center text-center font-alice backdrop-filter backdrop-brightness-[.90] text-primary antialiased">
+        <div className="w-3/4 py-2 px-2 rounded-lg">
+          <div className="text-2xl">The Wedding Of</div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="absolute text-5xl top-0 right-4">R</div>
+          <div className="absolute text-7xl">/</div>
+          <div className="absolute text-5xl top-8 left-4">R</div>
+        </div>
+        <div>
+          <div className="text-4xl mb-2">Rafli & Raka</div>
+          <div className="border-b border-primary"></div>
+          <div className="flex justify-center items-center w-full">
+            <div className="py-2">
+              <div className="text-4xl tracking-widest font-light">15  .  07  .  2023</div>
+              <button className="text-2xl border mt-6 px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30">Save the date</button>
             </div>
           </div>
         </div>
