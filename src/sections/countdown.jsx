@@ -3,7 +3,7 @@ import { getTargetDate } from "@/helpers/formatDate";
 import { useEffect, useState } from "react";
 
 export default function Countdown() {
-  const event_date = "2023-04-12T09:00:00+07:00";
+  const event_date = "2023-07-15T09:00:00+07:00";
 
   const [countdown, setCountdown] = useState(0);
 
