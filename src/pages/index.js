@@ -11,6 +11,7 @@ import Bride from "@/sections/bride";
 import Countdown from "@/sections/countdown";
 import Event from "@/sections/event";
 import Gallery from "@/sections/gallery";
+import Gift from "@/sections/gift";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home() {
         <Countdown />
         <Event />
         <Gallery />
+        <Gift />
       </main>
     </>
   );
