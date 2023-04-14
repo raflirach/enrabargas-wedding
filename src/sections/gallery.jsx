@@ -60,7 +60,7 @@ export default function Gallery() {
   );
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return (
-    <div className="relative">
+    <div className="relative" id="gallery">
       <div className="absolute inset-0 bg-fixed bg-cover"></div>
       <div className="relative z-10 h-screen px-8 grid place-items-center text-xl italic overflow-hidden">
         {props.map(({ x, y, rot, scale }, i) => (

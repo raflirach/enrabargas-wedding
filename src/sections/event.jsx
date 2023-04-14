@@ -1,6 +1,6 @@
 export default function Event() {
   return (
-    <div className="relative" id="bride">
+    <div className="relative" id="event">
       <div
         className="absolute inset-0 bg-fixed bg-cover"
         style={{
