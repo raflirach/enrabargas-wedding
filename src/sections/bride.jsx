@@ -12,9 +12,7 @@ export default function Bride() {
       ></div>
       <div className="relative z-10 h-screen grid place-items-center text-primary text-center font-semibold antialiased">
         <div className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75]">
-          <div className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary">
-
-          </div>
+          <div className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary" />
           <div className="mb-4 text-lg font-fira">
             بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
           </div>
@@ -28,7 +26,9 @@ export default function Bride() {
               <div className="font-extrabold text-xl">
                 Rakananda Alysa Indioka
               </div>
-              <div className="font-fira">Putri dari Nama Bapak & Nama Ibu</div>
+              <div className="font-fira">
+                Putri dari Mohamad Tasrik & Lilih Lisnawati
+              </div>
             </div>
             <div className="text-4xl my-4 flex justify-center items-center gap-4">
               <div>
@@ -41,16 +41,11 @@ export default function Bride() {
             </div>
             <div>
               <div className="font-extrabold text-xl">Rafli Rachmawandi</div>
-              <div className="font-fira">Putra dari Kamil Johari & Yeni Supriyani</div>
+              <div className="font-fira">
+                Putra dari Kamil Johari & Yeni Supriyani
+              </div>
             </div>
           </div>
-          {/* <div
-            className="left-0 right-0 border-2 border-solid w-5/6"
-            style={{
-              borderImage:
-                "linear-gradient(to left, #FCDEC0 20%, transparent 80%) 100% 1",
-            }}
-          ></div> */}
         </div>
       </div>
     </div>

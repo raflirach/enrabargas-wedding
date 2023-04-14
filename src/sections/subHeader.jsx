@@ -3,20 +3,8 @@ export default function SubHeader() {
     <div className="relative">
       <div className="absolute inset-0 bg-fixed bg-cover"></div>
       <div className="relative z-10 py-20 px-8 grid place-items-center text-xl italic">
-        <div
-          className="p-8 border-t-2 border-solid border-opacity-100 border-r-0 border-b-0 border-l-0 relative"
-          style={{
-            borderImage:
-              "linear-gradient(to right, #FCDEC0 40%, transparent 60%) 100% 1",
-          }}
-        >
-          <div
-            className="p-8 absolute bottom-0 left-0 right-0 border-b-2 border-solid border-opacity-100"
-            style={{
-              borderImage:
-                "linear-gradient(to left, #FCDEC0 40%, transparent 60%) 100% 1",
-            }}
-          ></div>
+        <div className="p-8 relative bg-primary text-background">
+          <div className="w-full h-full border-2 border-secondary absolute top-2 left-2" />
           “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
           pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
           dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa

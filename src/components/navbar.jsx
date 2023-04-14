@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="navbar-containter bottom-5 fixed left-1/2 -translate-x-2/4 z-50">
+    <div className="navbar-containter bottom-1 fixed left-1/2 -translate-x-2/4 z-50">
       <div className="navbar backdrop-filter backdrop-brightness-75">
         <div className="icons">
           <Link href={"#home"} scroll={false}>
