@@ -1,13 +1,5 @@
 import { useTransition, animated } from "@react-spring/web";
-import { useEffect, useState } from "react";
-import { CountdownTimer } from "../components/countDownTimer";
-import {
-  dateGetDate,
-  dateGetDay,
-  dateGetMonth,
-  dateGetYear,
-  getTargetDate,
-} from "@/helpers/formatDate";
+import { useState } from "react";
 
 const slides = [
   "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
