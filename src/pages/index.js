@@ -9,6 +9,8 @@ import Header from "@/sections/header";
 import SubHeader from "@/sections/subHeader";
 import Bride from "@/sections/bride";
 import Countdown from "@/sections/countdown";
+import Event from "@/sections/event";
+import Gallery from "@/sections/gallery";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +23,8 @@ export default function Home() {
         <SubHeader />
         <Bride />
         <Countdown />
+        <Event />
+        <Gallery />
       </main>
     </>
   );
