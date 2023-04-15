@@ -1,8 +1,11 @@
 import Link from "next/link";
+import { useRef, useState } from "react";
+import MusicNoteRoundedIcon from "@mui/icons-material/MusicNoteRounded";
+import MusicOffRoundedIcon from "@mui/icons-material/MusicOffRounded";
 
-export default function Navbar() {
+export default function Navbar({audioElement, isPlay, setIsPlay, handleOnClick}) {
   return (
-    <div className="navbar-containter bottom-1 fixed left-1/2 -translate-x-2/4 z-50">
+    <div className="navbar-containter bottom-0 fixed left-1/2 -translate-x-2/4 z-50">
       <div className="navbar backdrop-filter backdrop-brightness-75">
         <div className="icons">
           <Link href={"#home"} scroll={false}>
@@ -80,6 +83,11 @@ export default function Navbar() {
             </span>
           </Link>
 
+          <span onClick={handleOnClick}>
+            <svg className="w-8 h-8">
+              {isPlay ? <MusicNoteRoundedIcon /> : <MusicOffRoundedIcon />}
+            </svg>
+          </span>
         </div>
       </div>
     </div>

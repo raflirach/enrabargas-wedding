@@ -19,7 +19,7 @@ export default function Bride() {
           <div className="mb-4 text-xl">Assalamu’alaikum Wr. Wb.</div>
           <div className="text-center font-fira">
             Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala,
-            insyaaAllah kami akan menyelenggarakan acara pernikahan :
+            insyaaAllah kami akan menyelenggarakan acara pernikahan:
           </div>
           <div className="my-12">
             <div>

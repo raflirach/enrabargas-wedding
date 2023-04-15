@@ -1,4 +1,4 @@
-export default function Opening({isOpen, setIsOpen}) {
+export default function Opening({handleOnOpen}) {
   return (
     <div className="absolute bg-background z-50 h-screen px-8 grid place-items-center text-xl max-w-[640px]">
       <div className="p-8 relative bg-primary text-background text-center font-alice">
@@ -19,7 +19,7 @@ export default function Opening({isOpen, setIsOpen}) {
         </div>
         <button 
           className="text-lg border mt-6 px-4 py-1 border-primary text-primary bg-background rounded-md hover:text-background hover:bg-primary hover:border-background" 
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => handleOnOpen()}
         >
           Buka Undangan
         </button>
