@@ -1,24 +1,24 @@
 import { useState } from "react";
 
 export default function Gift() {
-  const [clicked, setClicked] = useState(false)
-  const [clicked2, setClicked2] = useState(false)
+  const [clicked, setClicked] = useState(false);
+  const [clicked2, setClicked2] = useState(false);
 
   const handleOnClick = () => {
-    navigator.clipboard.writeText(2832342361)
+    navigator.clipboard.writeText(2832342361);
     setClicked(true);
     setTimeout(() => {
       setClicked(false);
     }, 3000);
-  }
+  };
 
   const handleOnClick2 = () => {
-    navigator.clipboard.writeText(7401814837)
+    navigator.clipboard.writeText(7401814837);
     setClicked2(true);
     setTimeout(() => {
       setClicked2(false);
     }, 3000);
-  }
+  };
 
   return (
     <div className="relative" id="gift">
@@ -43,7 +43,10 @@ export default function Gift() {
               <img src="./bca.svg" className="h-20 w-20 animate-pulse" />
               <div className="text-md font-fira">a/n Rafli Rachmawandi</div>
               <div className="mb-1 text-lg">2832342361</div>
-              <button className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10" onClick={handleOnClick}>
+              <button
+                className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
+                onClick={handleOnClick}
+              >
                 <div className="flex justify-center items-center gap-1">
                   <svg
                     fill="currentColor"
@@ -63,16 +66,21 @@ export default function Gift() {
                       d="M2 7a1 1 0 011-1h8a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V7zm2 3.25a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75zm0 3.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75z"
                     />
                   </svg>
-                  {clicked ? 'Copied' : 'Copy'}
+                  {clicked ? "Copied" : "Copy"}
                 </div>
               </button>
             </div>
             <div className="relative flex flex-col justify-center items-center mr-4 p-4 w-1/2 backdrop-filter backdrop-brightness-[.75]">
               <div className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
               <img src="./bca.svg" className="h-20 w-20 animate-pulse" />
-              <div className="text-md font-fira">a/n Rakananda Alysa Indioka</div>
+              <div className="text-md font-fira">
+                a/n Rakananda Alysa Indioka
+              </div>
               <div className="mb-1 text-lg">7401814837</div>
-              <button className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10" onClick={handleOnClick2}>
+              <button
+                className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
+                onClick={handleOnClick2}
+              >
                 <div className="flex justify-center items-center gap-1">
                   <svg
                     fill="currentColor"
@@ -92,7 +100,7 @@ export default function Gift() {
                       d="M2 7a1 1 0 011-1h8a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V7zm2 3.25a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75zm0 3.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75z"
                     />
                   </svg>
-                  {clicked2 ? 'Copied' : 'Copy'}
+                  {clicked2 ? "Copied" : "Copy"}
                 </div>
               </button>
             </div>
@@ -100,7 +108,10 @@ export default function Gift() {
           <div className="relative flex flex-col justify-center items-center mx-4 p-4 backdrop-filter backdrop-brightness-[.75] mt-4">
             <div className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
             <div className="text-xl">Alamat</div>
-            <div className="font-fira text-sm">Abdi Negara</div>
+            <div className="font-fira text-sm">
+              Komplek Abdi Negara D7 No 36 RT 02 RW 13 Desa Rancaekek Kec.
+              Rancaekek Wetan
+            </div>
           </div>
         </div>
       </div>
