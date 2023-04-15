@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Event() {
   return (
     <div className="relative" id="event">
@@ -14,7 +16,10 @@ export default function Event() {
         <div>
           <div className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75] mb-2">
             <div className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary" />
-            <img src="./ring.svg" className="h-14 w-14 mb-4 animate-bounce-slow"/>
+            <img
+              src="./ring.svg"
+              className="h-14 w-14 mb-4 animate-bounce-slow"
+            />
             <div className="mb-1 text-2xl">Akad Nikah</div>
             <div className="flex justify-evenly w-full items-center">
               <div className="text-xl w-1/3">Sabtu</div>
@@ -31,7 +36,7 @@ export default function Event() {
               Babakan Asta, Bojongloa, Kec. Rancaekek, Kabupaten Bandung, Jawa
               Barat 40394
             </div>
-            <button className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10">
+            <Link href="https://goo.gl/maps/gQqrnGf6fYyN2vc97" className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10">
               <div className="flex justify-center items-center gap-1">
                 <svg
                   fill="currentColor"
@@ -48,11 +53,14 @@ export default function Event() {
                 </svg>{" "}
                 Lihat Lokasi
               </div>
-            </button>
+            </Link>
           </div>
           <div className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75]">
             <div className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
-            <img src="./rose.svg" className="h-14 w-14 mb-4 animate-bounce-slow"/>
+            <img
+              src="./rose.svg"
+              className="h-14 w-14 mb-4 animate-bounce-slow"
+            />
             <div className="mb-1 text-2xl">Resepsi</div>
             <div className="flex justify-evenly w-full items-center">
               <div className="text-xl w-1/3">Sabtu</div>
@@ -69,7 +77,7 @@ export default function Event() {
               Babakan Asta, Bojongloa, Kec. Rancaekek, Kabupaten Bandung, Jawa
               Barat 40394
             </div>
-            <button className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10">
+            <Link href="https://goo.gl/maps/gQqrnGf6fYyN2vc97" className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10">
               <div className="flex justify-center items-center gap-1">
                 <svg
                   fill="currentColor"
@@ -86,7 +94,7 @@ export default function Event() {
                 </svg>{" "}
                 Lihat Lokasi
               </div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

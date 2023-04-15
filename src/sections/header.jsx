@@ -1,4 +1,5 @@
 import { useTransition, animated } from "@react-spring/web";
+import Link from "next/link";
 import { useState } from "react";
 
 const slides = [
@@ -51,8 +52,15 @@ export default function Header() {
           <div className="border-b border-primary"></div>
           <div className="flex justify-center items-center w-full">
             <div className="py-2">
-              <div className="text-4xl tracking-widest font-light">15  .  07  .  2023</div>
-              <button className="text-2xl border mt-6 px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30">Save the date</button>
+              <div className="text-4xl tracking-widest font-light mb-6">
+                15 . 07 . 2023
+              </div>
+              <Link
+                href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MDBvaDBwdjEyMGV1Y3NoaTcxdjRjbXE3ODIgcmFmbGkwNjAzOTVAbQ&amp;tmsrc=rafli060395%40gmail.com"
+                className="text-2xl border px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30"
+              >
+                Save the date
+              </Link>
             </div>
           </div>
         </div>
