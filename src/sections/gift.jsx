@@ -1,6 +1,7 @@
+import { scale, trans } from "@/helpers/utils";
 import { useState } from "react";
 
-export default function Gift() {
+export default function Gift({ m }) {
   const [clicked, setClicked] = useState(false);
   const [clicked2, setClicked2] = useState(false);
 
@@ -33,21 +34,82 @@ export default function Gift() {
       ></div>
       <div className="relative z-10 grid place-items-center text-primary text-center font-semibold antialiased py-8">
         <div>
-          <div className="relative flex flex-col justify-center items-center mx-4 p-4 backdrop-filter backdrop-brightness-[.75] mb-2">
-            <div className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary" />
-            <div className="text-2xl">Kirim Hadiah</div>
-          </div>
+          <m.div
+            initial={scale(0)}
+            transition={trans}
+            whileInView={scale(1)}
+            viewport={{ once: true, amount: 0.8 }}
+            className="relative flex flex-col justify-center items-center mx-4 p-4 backdrop-filter backdrop-brightness-[.75] mb-2"
+          >
+            <m.div
+              initial={scale(0)}
+              transition={{ ...trans, delay: 0.5 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
+              className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary"
+            />
+            <m.div
+              initial={scale(0)}
+              transition={{ ...trans, delay: 0.8 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-2xl"
+            >
+              Kirim Hadiah
+            </m.div>
+          </m.div>
           <div className="flex gap-2">
-            <div className="relative flex flex-col justify-center items-center ml-4 p-4 w-1/2 backdrop-filter backdrop-brightness-[.75]">
-              <div className="absolute border-2 border-solid w-full h-full top-2 -left-2 border-primary" />
-              <img src="./bca.svg" className="h-20 w-20 animate-pulse" />
-              <div className="text-md font-fira">a/n Rafli Rachmawandi</div>
-              <div className="mb-1 text-lg">2832342361</div>
+            <m.div
+              initial={scale(0)}
+              transition={{ ...trans, delay: 1 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
+              className="relative flex flex-col justify-center items-center ml-4 p-4 w-1/2 backdrop-filter backdrop-brightness-[.75]"
+            >
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 1.5 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="absolute border-2 border-solid w-full h-full top-2 -left-2 border-primary"
+              />
+              <m.img
+                initial={scale(0)}
+                transition={{ ...trans, delay: 1.8 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                src="./bca.svg"
+                className="h-20 w-20 animate-pulse"
+              />
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 2 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="text-md font-fira"
+              >
+                a/n Rafli Rachmawandi
+              </m.div>
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 2.2 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="mb-1 text-lg"
+              >
+                2832342361
+              </m.div>
               <button
                 className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
                 onClick={handleOnClick}
               >
-                <div className="flex justify-center items-center gap-1">
+                <m.div
+                  initial={scale(0)}
+                  transition={{ ...trans, delay: 2.4 }}
+                  whileInView={scale(1)}
+                  viewport={{ once: true, amount: 0.8 }}
+                  className="flex justify-center items-center gap-1"
+                >
                   <svg
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -67,21 +129,60 @@ export default function Gift() {
                     />
                   </svg>
                   {clicked ? "Copied" : "Copy"}
-                </div>
+                </m.div>
               </button>
-            </div>
-            <div className="relative flex flex-col justify-center items-center mr-4 p-4 w-1/2 backdrop-filter backdrop-brightness-[.75]">
-              <div className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
-              <img src="./bca.svg" className="h-20 w-20 animate-pulse" />
-              <div className="text-md font-fira">
+            </m.div>
+            <m.div
+              initial={scale(0)}
+              transition={{ ...trans, delay: 2 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
+              className="relative flex flex-col justify-center items-center mr-4 p-4 w-1/2 backdrop-filter backdrop-brightness-[.75]"
+            >
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 2.5 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary"
+              />
+              <m.img
+                initial={scale(0)}
+                transition={{ ...trans, delay: 2.8 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                src="./bca.svg"
+                className="h-20 w-20 animate-pulse"
+              />
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 3 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="text-md font-fira"
+              >
                 a/n Rakananda Alysa Indioka
-              </div>
-              <div className="mb-1 text-lg">7401814837</div>
+              </m.div>
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 3.2 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="mb-1 text-lg"
+              >
+                7401814837
+              </m.div>
               <button
                 className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
                 onClick={handleOnClick2}
               >
-                <div className="flex justify-center items-center gap-1">
+                <m.div
+                  initial={scale(0)}
+                  transition={{ ...trans, delay: 3.4 }}
+                  whileInView={scale(1)}
+                  viewport={{ once: true, amount: 0.8 }}
+                  className="flex justify-center items-center gap-1"
+                >
                   <svg
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -101,18 +202,44 @@ export default function Gift() {
                     />
                   </svg>
                   {clicked2 ? "Copied" : "Copy"}
-                </div>
+                </m.div>
               </button>
-            </div>
+            </m.div>
           </div>
-          <div className="relative flex flex-col justify-center items-center mx-4 p-4 backdrop-filter backdrop-brightness-[.75] mt-4">
-            <div className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
-            <div className="text-xl">Alamat</div>
-            <div className="font-fira text-sm">
+          <m.div
+            initial={scale(0)}
+            transition={{ ...trans, delay: 3 }}
+            whileInView={scale(1)}
+            viewport={{ once: true, amount: 0.8 }}
+            className="relative flex flex-col justify-center items-center mx-4 p-4 backdrop-filter backdrop-brightness-[.75] mt-4"
+          >
+            <m.div
+              initial={scale(0)}
+              transition={{ ...trans, delay: 3.5 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
+              className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary"
+            />
+            <m.div
+              initial={scale(0)}
+              transition={{ ...trans, delay: 3.8 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-xl"
+            >
+              Alamat
+            </m.div>
+            <m.div
+              initial={scale(0)}
+              transition={{ ...trans, delay: 4 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
+              className="font-fira text-sm"
+            >
               Komplek Abdi Negara D7 No 36 RT 02 RW 13 Desa Rancaekek Kec.
               Rancaekek Wetan
-            </div>
-          </div>
+            </m.div>
+          </m.div>
         </div>
       </div>
     </div>

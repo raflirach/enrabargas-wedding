@@ -11,7 +11,7 @@ import {
   Opening,
   SubHeader,
 } from "@/sections";
-import { motion, useCycle } from "framer-motion";
+import { motion as m, useCycle } from "framer-motion";
 import { useRef, useState } from "react";
 
 export default function Home() {
@@ -57,7 +57,7 @@ export default function Home() {
   const { height } = useDimensions(containerRef);
 
   return (
-    <motion.nav
+    <m.nav
       initial={false}
       animate={isOpen2 ? "closed" : "open"}
       custom={height}
@@ -74,24 +74,24 @@ export default function Home() {
               isPlay={isPlay}
               setIsPlay={setIsPlay}
             />
-            <motion.div
+            <m.div
               initial={{ x: "-100%" }}
               animate={{ x: "0%" }}
               transition={{ etype: "spring", stiffness: 100, duration: 2 }}
             >
-              <Header />
-              <SubHeader />
-              <Bride />
-              <Countdown />
-              <Event />
-              <Gallery />
-              <Gift />
-              <Footer />
-            </motion.div>
+              <Header m={m} />
+              <SubHeader m={m} />
+              <Bride m={m} />
+              <Countdown m={m} />
+              <Event m={m} />
+              <Gallery m={m} />
+              <Gift m={m} />
+              <Footer m={m} />
+            </m.div>
           </>
         )}
       </main>
       <audio ref={audioElement} src="./wedding-bell.mp3"></audio>
-    </motion.nav>
+    </m.nav>
   );
 }

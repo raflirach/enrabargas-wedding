@@ -1,7 +1,6 @@
 import { useTransition, animated } from "@react-spring/web";
 import {
   animate,
-  motion as m,
   useMotionValue,
   useTransform,
 } from "framer-motion";
@@ -14,7 +13,7 @@ const slides = [
   "https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
 ];
 
-export default function Header() {
+export default function Header({ m }) {
   const [index, set] = useState(0);
   const transitions = useTransition(index, {
     key: index,
@@ -68,7 +67,7 @@ export default function Header() {
             animate={{ y: "0%" }}
             transition={{
               type: "spring",
-              stiffness: 100,
+              stiffness: 40,
               duration: 2,
               delay: 2,
             }}
@@ -83,7 +82,7 @@ export default function Header() {
             animate={{ x: "0%", opacity: 1 }}
             transition={{
               type: "spring",
-              stiffness: 100,
+              stiffness: 40,
               duration: 2,
               delay: 2.3,
             }}
@@ -96,7 +95,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             transition={{
               type: "spring",
-              stiffness: 100,
+              stiffness: 40,
               duration: 2,
               delay: 2.3,
             }}
@@ -109,7 +108,7 @@ export default function Header() {
             animate={{ x: "0%", opacity: 1 }}
             transition={{
               type: "spring",
-              stiffness: 100,
+              stiffness: 40,
               duration: 2,
               delay: 2.3,
             }}
@@ -124,7 +123,7 @@ export default function Header() {
             animate={{ y: "0%", opacity: 1 }}
             transition={{
               type: "spring",
-              stiffness: 100,
+              stiffness: 40,
               duration: 2,
               delay: 2.6,
             }}
@@ -150,7 +149,7 @@ export default function Header() {
                 animate={{ y: "0%", opacity: 1 }}
                 transition={{
                   type: "spring",
-                  stiffness: 100,
+                  stiffness: 40,
                   duration: 2,
                   delay: 2.9,
                 }}
@@ -165,7 +164,7 @@ export default function Header() {
                 animate={{ y: "0%", opacity: 1 }}
                 transition={{
                   type: "spring",
-                  stiffness: 100,
+                  stiffness: 40,
                   duration: 2,
                   delay: 3.2,
                 }}

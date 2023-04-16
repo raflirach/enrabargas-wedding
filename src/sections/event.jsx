@@ -1,8 +1,10 @@
+import { scale, trans } from "@/helpers/utils";
+import { delay } from "framer-motion";
 import Link from "next/link";
 
-export default function Event() {
+export default function Event({ m }) {
   return (
-    <div className="relative" id="event">
+    <div className="relative overflow-hidden" id="event">
       <div
         className="absolute inset-0 bg-fixed bg-cover"
         style={{
@@ -14,30 +16,131 @@ export default function Event() {
       ></div>
       <div className="relative z-10 grid place-items-center text-primary text-center font-semibold antialiased py-8">
         <div>
-          <div className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75] mb-2">
-            <div className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary" />
-            <img
+          <m.div
+            initial={scale(0)}
+            transition={trans}
+            whileInView={scale(1)}
+            viewport={{ once: true, amount: 0.8 }}
+            className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75] mb-2"
+          >
+            <m.div
+              initial={scale(0)}
+              transition={{ ...trans, delay: 0.5 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
+              className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary"
+            />
+            <m.img
+              initial={scale(0)}
+              transition={{ ...trans, delay: 1 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
               src="./ring.svg"
               className="h-14 w-14 mb-4 animate-bounce-slow"
             />
-            <div className="mb-1 text-2xl">Akad Nikah</div>
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 1.2 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="mb-1 text-2xl"
+            >
+              Akad Nikah
+            </m.div>
             <div className="flex justify-evenly w-full items-center">
-              <div className="text-xl w-1/3">Sabtu</div>
-              <div className="flex flex-col border-r border-l border-primary px-5 w-1/3">
-                <div className="text-4xl leading-6">15</div>
-                <div className="text-2xl">2023</div>
-              </div>
-              <div className="text-xl w-1/3">Juli</div>
+              <m.div
+                initial={{ x: "-100%", opacity: 0 }}
+                transition={{ ...trans, delay: 1.4 }}
+                whileInView={{ x: "0%", opacity: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+                className="text-xl w-1/3"
+              >
+                Sabtu
+              </m.div>
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 1.6 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="flex flex-col border-r border-l border-primary px-5 w-1/3"
+              >
+                <m.div
+                  initial={{ y: "-100%", opacity: 0 }}
+                  transition={{ ...trans, delay: 1.8 }}
+                  whileInView={{ y: "0%", opacity: 1 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  className="text-4xl leading-6"
+                >
+                  15
+                </m.div>
+                <m.div
+                  initial={{ y: "-100%", opacity: 0 }}
+                  transition={{ ...trans, delay: 2 }}
+                  whileInView={{ y: "0%", opacity: 1 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  className="text-2xl"
+                >
+                  2023
+                </m.div>
+              </m.div>
+              <m.div
+                initial={{ x: "100%", opacity: 0 }}
+                transition={{ ...trans, delay: 2.2 }}
+                whileInView={{ x: "0%", opacity: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+                className="text-xl w-1/3"
+              >
+                Juli
+              </m.div>
             </div>
-            <div className="text-lg font-fira">09.00 ~ Selesai</div>
-            <div className="my-2 text-lg">Alamat</div>
-            <div className="text-xl">Imah Asta</div>
-            <div className="text-md font-fira">
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 2.4 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-lg font-fira"
+            >
+              09.00 ~ Selesai
+            </m.div>
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 2.6 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="my-2 text-lg"
+            >
+              Alamat
+            </m.div>
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 2.8 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-xl"
+            >
+              Imah Asta
+            </m.div>
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 3 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-md font-fira"
+            >
               Babakan Asta, Bojongloa, Kec. Rancaekek, Kabupaten Bandung, Jawa
               Barat 40394
-            </div>
-            <Link href="https://goo.gl/maps/gQqrnGf6fYyN2vc97" className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10">
-              <div className="flex justify-center items-center gap-1">
+            </m.div>
+            <Link
+              href="https://goo.gl/maps/gQqrnGf6fYyN2vc97"
+              className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
+            >
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 3.2 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="flex justify-center items-center gap-1"
+              >
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -52,33 +155,134 @@ export default function Event() {
                   />
                 </svg>{" "}
                 Lihat Lokasi
-              </div>
+              </m.div>
             </Link>
-          </div>
-          <div className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75]">
-            <div className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
-            <img
+          </m.div>
+          <m.div
+            initial={scale(0)}
+            transition={trans}
+            whileInView={scale(1)}
+            viewport={{ once: true, amount: 0.8 }}
+            className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75]"
+          >
+            <m.div
+              initial={scale(0)}
+              transition={{ ...trans, delay: 0.5 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
+              className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary"
+            />
+            <m.img
+              initial={scale(0)}
+              transition={{ ...trans, delay: 1 }}
+              whileInView={scale(1)}
+              viewport={{ once: true, amount: 0.8 }}
               src="./rose.svg"
               className="h-14 w-14 mb-4 animate-bounce-slow"
             />
-            <div className="mb-1 text-2xl">Resepsi</div>
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 1.2 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="mb-1 text-2xl"
+            >
+              Resepsi
+            </m.div>
             <div className="flex justify-evenly w-full items-center">
-              <div className="text-xl w-1/3">Sabtu</div>
-              <div className="flex flex-col border-r border-l border-primary px-5 w-1/3">
-                <div className="text-4xl leading-6">15</div>
-                <div className="text-2xl">2023</div>
-              </div>
-              <div className="text-xl w-1/3">Juli</div>
+              <m.div
+                initial={{ x: "-100%", opacity: 0 }}
+                transition={{ ...trans, delay: 1.4 }}
+                whileInView={{ x: "0%", opacity: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+                className="text-xl w-1/3"
+              >
+                Sabtu
+              </m.div>
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 1.6 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="flex flex-col border-r border-l border-primary px-5 w-1/3"
+              >
+                <m.div
+                  initial={{ y: "-100%", opacity: 0 }}
+                  transition={{ ...trans, delay: 1.8 }}
+                  whileInView={{ y: "0%", opacity: 1 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  className="text-4xl leading-6"
+                >
+                  15
+                </m.div>
+                <m.div
+                  initial={{ y: "-100%", opacity: 0 }}
+                  transition={{ ...trans, delay: 2 }}
+                  whileInView={{ y: "0%", opacity: 1 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  className="text-2xl"
+                >
+                  2023
+                </m.div>
+              </m.div>
+              <m.div
+                initial={{ x: "100%", opacity: 0 }}
+                transition={{ ...trans, delay: 2.2 }}
+                whileInView={{ x: "0%", opacity: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+                className="text-xl w-1/3"
+              >
+                Juli
+              </m.div>
             </div>
-            <div className="text-lg font-fira">11.00 ~ Selesai</div>
-            <div className="my-2 text-lg">Alamat</div>
-            <div className="text-xl">Imah Asta</div>
-            <div className="text-md font-fira">
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 2.4 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-lg font-fira"
+            >
+              11.00 ~ Selesai
+            </m.div>
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 2.6 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="my-2 text-lg"
+            >
+              Alamat
+            </m.div>
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 2.8 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-xl"
+            >
+              Imah Asta
+            </m.div>
+            <m.div
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ ...trans, delay: 3 }}
+              whileInView={{ y: "0%", opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-md font-fira"
+            >
               Babakan Asta, Bojongloa, Kec. Rancaekek, Kabupaten Bandung, Jawa
               Barat 40394
-            </div>
-            <Link href="https://goo.gl/maps/gQqrnGf6fYyN2vc97" className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10">
-              <div className="flex justify-center items-center gap-1">
+            </m.div>
+            <Link
+              href="https://goo.gl/maps/gQqrnGf6fYyN2vc97"
+              className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
+            >
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 3.2 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="flex justify-center items-center gap-1"
+              >
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -93,9 +297,9 @@ export default function Event() {
                   />
                 </svg>{" "}
                 Lihat Lokasi
-              </div>
+              </m.div>
             </Link>
-          </div>
+          </m.div>
         </div>
       </div>
     </div>

@@ -1,4 +1,6 @@
-export default function Bride() {
+import { scale, trans } from "@/helpers/utils";
+
+export default function Bride({ m }) {
   return (
     <div className="relative" id="bride">
       <div
@@ -11,42 +13,120 @@ export default function Bride() {
         }}
       ></div>
       <div className="relative z-10 h-screen grid place-items-center text-primary text-center font-semibold antialiased">
-        <div className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75]">
-          <div className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary" />
-          <div className="mb-4 text-lg font-fira">
+        <m.div
+          initial={scale(0)}
+          transition={trans}
+          whileInView={scale(1)}
+          viewport={{ once: true, amount: 0.8 }}
+          className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75]"
+        >
+          <m.div
+            initial={scale(0)}
+            transition={{ ...trans, delay: 0.5 }}
+            whileInView={scale(1)}
+            viewport={{ once: true, amount: 0.8 }}
+            className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary"
+          />
+          <m.div
+            initial={{ y: "100%", opacity: 0 }}
+            transition={{ ...trans, delay: 1 }}
+            whileInView={{ y: "0%", opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            className="mb-4 text-lg font-fira"
+          >
             بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
-          </div>
-          <div className="mb-4 text-xl">Assalamu’alaikum Wr. Wb.</div>
-          <div className="text-center font-fira">
+          </m.div>
+          <m.div
+            initial={{ y: "100%", opacity: 0 }}
+            transition={{ ...trans, delay: 1.2 }}
+            whileInView={{ y: "0%", opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            className="mb-4 text-xl"
+          >
+            Assalamu’alaikum Wr. Wb.
+          </m.div>
+          <m.div
+            initial={{ y: "100%", opacity: 0 }}
+            transition={{ ...trans, delay: 1.4 }}
+            whileInView={{ y: "0%", opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            className="text-center font-fira"
+          >
             Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala,
             insyaaAllah kami akan menyelenggarakan acara pernikahan:
-          </div>
+          </m.div>
           <div className="my-12">
             <div>
-              <div className="font-extrabold text-xl">
+              <m.div
+                initial={{ y: "100%", opacity: 0 }}
+                transition={{ ...trans, delay: 1.6 }}
+                whileInView={{ y: "0%", opacity: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+                className="font-extrabold text-xl"
+              >
                 Rakananda Alysa Indioka
-              </div>
-              <div className="font-fira">
+              </m.div>
+              <m.div
+                initial={{ y: "100%", opacity: 0 }}
+                transition={{ ...trans, delay: 1.8 }}
+                whileInView={{ y: "0%", opacity: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+                className="font-fira"
+              >
                 Putri dari Mohamad Tasrik & Lilih Lisnawati
-              </div>
+              </m.div>
             </div>
             <div className="text-4xl my-4 flex justify-center items-center gap-4">
               <div>
-                <hr className="left-0 right-0 border-b-1 border-solid border-primary w-20" />
+                <m.hr
+                  initial={{ x: "100%", opacity: 0 }}
+                  transition={{ ...trans, delay: 2.6 }}
+                  whileInView={{ x: "0%", opacity: 1 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  className="left-0 right-0 border-b-1 border-solid border-primary w-20"
+                />
               </div>
-              <div className="text-5xl italic">&</div>
+              <m.div
+                initial={scale(0)}
+                transition={{ ...trans, delay: 2 }}
+                whileInView={scale(1)}
+                viewport={{ once: true, amount: 0.8 }}
+                className="text-5xl italic"
+              >
+                &
+              </m.div>
               <div>
-                <hr className="left-0 right-0 border-b-1 border-solid border-primary w-20" />
+                <m.hr
+                  initial={{ x: "-100%", opacity: 0 }}
+                  transition={{ ...trans, delay: 2.6 }}
+                  whileInView={{ x: "0%", opacity: 1 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  className="left-0 right-0 border-b-1 border-solid border-primary w-20"
+                />
               </div>
             </div>
             <div>
-              <div className="font-extrabold text-xl">Rafli Rachmawandi</div>
-              <div className="font-fira">
+              <m.div
+                initial={{ y: "100%", opacity: 0 }}
+                transition={{ ...trans, delay: 2.2 }}
+                whileInView={{ y: "0%", opacity: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+                className="font-extrabold text-xl"
+              >
+                Rafli Rachmawandi
+              </m.div>
+              <m.div
+                initial={{ y: "100%", opacity: 0 }}
+                transition={{ ...trans, delay: 2.4 }}
+                whileInView={{ y: "0%", opacity: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+                className="font-fira"
+              >
                 Putra dari Kamil Johari & Yeni Supriyani
-              </div>
+              </m.div>
             </div>
           </div>
-        </div>
+        </m.div>
       </div>
     </div>
   );
