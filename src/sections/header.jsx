@@ -1,6 +1,12 @@
 import { useTransition, animated } from "@react-spring/web";
+import {
+  animate,
+  motion as m,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const slides = [
   "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
@@ -24,6 +30,23 @@ export default function Header() {
     exitBeforeEnter: true,
   });
 
+  const count = useMotionValue(0);
+  const count2 = useMotionValue(0);
+  const count3 = useMotionValue(2000);
+  const rounded = useTransform(count, Math.round);
+  const rounded2 = useTransform(count2, Math.round);
+  const rounded3 = useTransform(count3, Math.round);
+
+  useEffect(() => {
+    setTimeout(() => {
+      const animation = animate(count, 15, { duration: 2 });
+      const animation2 = animate(count2, 7, { duration: 4 });
+      const animation3 = animate(count3, 2023, { duration: 7 });
+
+      return [animation.stop, animation2.stop, animation3.stop];
+    }, 4000);
+  }, []);
+
   return (
     <div className="relative" id="home">
       {transitions((style, i) => (
@@ -39,28 +62,121 @@ export default function Header() {
         />
       ))}
       <div className="relative z-10 h-screen grid place-items-center text-center font-alice backdrop-filter backdrop-brightness-[.90] text-primary antialiased">
-        <div className="w-3/4 py-2 px-2 rounded-lg">
-          <div className="text-2xl">The Wedding Of</div>
+        <div className="w-3/4 py-2 px-2 rounded-lg overflow-hidden">
+          <m.div
+            initial={{ y: "-120%" }}
+            animate={{ y: "0%" }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              duration: 2,
+              delay: 2,
+            }}
+            className="text-2xl"
+          >
+            The Wedding Of
+          </m.div>
         </div>
         <div className="relative flex justify-center">
-          <div className="absolute text-5xl top-0 right-4">R</div>
-          <div className="absolute text-7xl">/</div>
-          <div className="absolute text-5xl top-8 left-4">R</div>
+          <m.div
+            initial={{ x: "-120%", opacity: 0 }}
+            animate={{ x: "0%", opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              duration: 2,
+              delay: 2.3,
+            }}
+            className="absolute text-5xl top-0 right-4 overflow-hidden"
+          >
+            R
+          </m.div>
+          <m.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              duration: 2,
+              delay: 2.3,
+            }}
+            className="absolute text-7xl"
+          >
+            /
+          </m.div>
+          <m.div
+            initial={{ x: "120%", opacity: 0 }}
+            animate={{ x: "0%", opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              duration: 2,
+              delay: 2.3,
+            }}
+            className="absolute text-5xl top-8 left-4"
+          >
+            R
+          </m.div>
         </div>
-        <div>
-          <div className="text-4xl mb-2">Rafli & Raka</div>
-          <div className="border-b border-primary"></div>
+        <div className="overflow-hidden">
+          <m.div
+            initial={{ y: "120%", opacity: 0 }}
+            animate={{ y: "0%", opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              duration: 2,
+              delay: 2.6,
+            }}
+            className="text-4xl mb-2"
+          >
+            Rafli & Raka
+          </m.div>
+          <m.div
+            initial={{ x: "-100%" }}
+            animate={{ x: "0%" }}
+            transition={{
+              type: "spring",
+              stiffness: 10,
+              duration: 10,
+              delay: 3,
+            }}
+            className="border-b border-primary"
+          ></m.div>
           <div className="flex justify-center items-center w-full">
             <div className="py-2">
-              <div className="text-4xl tracking-widest font-light mb-6">
-                15 . 07 . 2023
-              </div>
-              <Link
-                href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MDBvaDBwdjEyMGV1Y3NoaTcxdjRjbXE3ODIgcmFmbGkwNjAzOTVAbQ&amp;tmsrc=rafli060395%40gmail.com"
-                className="text-2xl border px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30"
+              <m.div
+                initial={{ y: "120%", opacity: 0 }}
+                animate={{ y: "0%", opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  duration: 2,
+                  delay: 2.9,
+                }}
+                className="text-4xl tracking-widest font-light mb-6 flex justify-center items-center"
               >
-                Save the date
-              </Link>
+                <m.span>{rounded}</m.span> <span className="mx-2">.</span>{" "}
+                <m.span>{rounded2}</m.span> <span className="mx-2">.</span>{" "}
+                <m.span>{rounded3}</m.span>
+              </m.div>
+              <m.div
+                initial={{ y: "120%", opacity: 0 }}
+                animate={{ y: "0%", opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  duration: 2,
+                  delay: 3.2,
+                }}
+              >
+                <Link
+                  href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MDBvaDBwdjEyMGV1Y3NoaTcxdjRjbXE3ODIgcmFmbGkwNjAzOTVAbQ&amp;tmsrc=rafli060395%40gmail.com"
+                  className="text-2xl border px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30"
+                >
+                  Save the date
+                </Link>
+              </m.div>
             </div>
           </div>
         </div>

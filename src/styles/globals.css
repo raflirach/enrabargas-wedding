@@ -50,7 +50,7 @@ body {
   justify-content: space-around;
 }
 
-span {
+.icons span {
   width: 50px;
   height: 60px;
   display: flex;
@@ -61,12 +61,12 @@ span {
   cursor: pointer;
 }
 
-span i {
+.icons span i {
   font-size: 30px;
   color: white;
 }
 
-span:hover:not(:last-child) {
+.icons .span-hover:hover {
   background-color: var(--color-3);
   transform: translateY(-15px);
   transition: 0.7s cubic-bezier(0.48, 0.3, 0.42, 0.92);

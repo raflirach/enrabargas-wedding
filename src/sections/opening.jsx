@@ -1,10 +1,20 @@
-export default function Opening({handleOnOpen}) {
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+
+export default function Opening({ handleOnOpen, transition }) {
+  const router = useRouter()
+  const { query } = router
+  const tm = query?.tm
+
   return (
-    <div className="absolute bg-background z-50 h-screen px-8 grid place-items-center text-xl max-w-[640px]">
+    <motion.div
+      className="absolute bg-background z-50 h-screen px-8 grid place-items-center text-xl max-w-[640px]"
+      variants={transition}
+    >
       <div className="p-8 relative bg-primary text-background text-center font-alice">
         <div className="text-xl font-bold">Selamat Datang</div>
         <div className="text-sm italic">Bapak/Ibu/Saudara/i</div>
-        <div className="text-xl my-2 font-alice font-bold">Nama Tamu</div>
+        <div className="text-xl my-2 font-alice font-bold">{tm ? tm : 'Tamu Undangan'}</div>
         <div className="flex justify-center items-center">
           <img
             src="./love-latter.svg"
@@ -17,13 +27,13 @@ export default function Opening({handleOnOpen}) {
           memohon restu dari rekan sekalian untuk senantiasa mendoakan
           kelancaran acara pernikahan kami.
         </div>
-        <button 
-          className="text-lg border mt-6 px-4 py-1 border-primary text-primary bg-background rounded-md hover:text-background hover:bg-primary hover:border-background" 
+        <button
+          className="text-lg border mt-6 px-4 py-1 border-primary text-primary bg-background rounded-md hover:text-background hover:bg-primary hover:border-background"
           onClick={() => handleOnOpen()}
         >
           Buka Undangan
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
