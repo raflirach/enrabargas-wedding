@@ -1,5 +1,4 @@
 import { scale, trans } from "@/helpers/utils";
-import { delay } from "framer-motion";
 import Link from "next/link";
 
 export default function Event({ m }) {
