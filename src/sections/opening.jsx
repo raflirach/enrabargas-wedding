@@ -8,10 +8,10 @@ export default function Opening({ handleOnOpen, transition }) {
 
   return (
     <motion.div
-      className="absolute bg-background z-50 h-screen px-8 grid place-items-center text-xl max-w-[640px]"
+      className="absolute bg-background z-50 h-screen xs:px-4 px-8 grid place-items-center text-xl max-w-[640px]"
       variants={transition}
     >
-      <div className="p-8 relative bg-primary text-background text-center font-alice">
+      <div className="p-8 xs:p-4 relative bg-primary text-background text-center font-alice">
         <div className="text-xl font-bold">Selamat Datang</div>
         <div className="text-sm italic">Bapak/Ibu/Saudara/i</div>
         <div className="text-xl my-2 font-alice font-bold">{tm ? tm : 'Tamu Undangan'}</div>

@@ -20,7 +20,7 @@ export default function Countdown({ m }) {
           transition={{ ...trans }}
           whileInView={scale(1)}
           viewport={{ once: true, amount: 0.8 }}
-          className="text-2xl mb-10"
+          className="text-2xl xs:text-xl mb-10"
         >
           15 Juli 2023
         </m.div>

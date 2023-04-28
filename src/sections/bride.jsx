@@ -12,13 +12,13 @@ export default function Bride({ m }) {
           backgroundPosition: "center",
         }}
       ></div>
-      <div className="relative z-10 h-screen grid place-items-center text-primary text-center font-semibold antialiased">
+      <div className="relative z-10 py-8 px-8 xs:px-4 grid place-items-center text-primary text-center font-semibold antialiased">
         <m.div
           initial={scale(0)}
           transition={trans}
           whileInView={scale(1)}
           viewport={{ once: true, amount: 0.8 }}
-          className="relative flex flex-col justify-center items-center mx-8 p-8 backdrop-filter backdrop-brightness-[.75]"
+          className="relative flex flex-col justify-center items-center p-8 backdrop-filter backdrop-brightness-[.75]"
         >
           <m.div
             initial={scale(0)}
@@ -32,7 +32,7 @@ export default function Bride({ m }) {
             transition={{ ...trans, delay: 1 }}
             whileInView={{ y: "0%", opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
-            className="mb-4 text-lg font-fira"
+            className="mb-4 text-lg xs:text-sm font-fira"
           >
             بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
           </m.div>
@@ -41,7 +41,7 @@ export default function Bride({ m }) {
             transition={{ ...trans, delay: 1.2 }}
             whileInView={{ y: "0%", opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
-            className="mb-4 text-xl"
+            className="mb-4 text-xl xs:text-md"
           >
             Assalamu’alaikum Wr. Wb.
           </m.div>
@@ -50,7 +50,7 @@ export default function Bride({ m }) {
             transition={{ ...trans, delay: 1.4 }}
             whileInView={{ y: "0%", opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
-            className="text-center font-fira"
+            className="text-center font-fira xs:text-sm"
           >
             Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala,
             insyaaAllah kami akan menyelenggarakan acara pernikahan:
@@ -62,7 +62,7 @@ export default function Bride({ m }) {
                 transition={{ ...trans, delay: 1.6 }}
                 whileInView={{ y: "0%", opacity: 1 }}
                 viewport={{ once: true, amount: 0.8 }}
-                className="font-extrabold text-xl"
+                className="font-extrabold text-xl xs:text-lg"
               >
                 Rakananda Alysa Indioka
               </m.div>
@@ -71,7 +71,7 @@ export default function Bride({ m }) {
                 transition={{ ...trans, delay: 1.8 }}
                 whileInView={{ y: "0%", opacity: 1 }}
                 viewport={{ once: true, amount: 0.8 }}
-                className="font-fira"
+                className="font-fira xs:text-sm"
               >
                 Putri dari Mohamad Tasrik & Lilih Lisnawati
               </m.div>
@@ -83,7 +83,7 @@ export default function Bride({ m }) {
                   transition={{ ...trans, delay: 2.6 }}
                   whileInView={{ x: "0%", opacity: 1 }}
                   viewport={{ once: true, amount: 0.8 }}
-                  className="left-0 right-0 border-b-1 border-solid border-primary w-20"
+                  className="left-0 right-0 border-b-1 border-solid border-primary w-20 xs:w-16"
                 />
               </div>
               <m.div
@@ -91,7 +91,7 @@ export default function Bride({ m }) {
                 transition={{ ...trans, delay: 2 }}
                 whileInView={scale(1)}
                 viewport={{ once: true, amount: 0.8 }}
-                className="text-5xl italic"
+                className="text-5xl xs:text-4xl italic"
               >
                 &
               </m.div>
@@ -101,7 +101,7 @@ export default function Bride({ m }) {
                   transition={{ ...trans, delay: 2.6 }}
                   whileInView={{ x: "0%", opacity: 1 }}
                   viewport={{ once: true, amount: 0.8 }}
-                  className="left-0 right-0 border-b-1 border-solid border-primary w-20"
+                  className="left-0 right-0 border-b-1 border-solid border-primary w-20 xs:w-16"
                 />
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function Bride({ m }) {
                 transition={{ ...trans, delay: 2.2 }}
                 whileInView={{ y: "0%", opacity: 1 }}
                 viewport={{ once: true, amount: 0.8 }}
-                className="font-extrabold text-xl"
+                className="font-extrabold text-xl xs:text-lg"
               >
                 Rafli Rachmawandi
               </m.div>
@@ -120,7 +120,7 @@ export default function Bride({ m }) {
                 transition={{ ...trans, delay: 2.4 }}
                 whileInView={{ y: "0%", opacity: 1 }}
                 viewport={{ once: true, amount: 0.8 }}
-                className="font-fira"
+                className="font-fira xs:text-sm"
               >
                 Putra dari Kamil Johari & Yeni Supriyani
               </m.div>

@@ -4,13 +4,13 @@ export default function Footer({ m }) {
   return (
     <div className="relative">
       <div className="absolute inset-0 bg-fixed bg-cover"></div>
-      <div className="relative z-10 py-20 px-8 grid place-items-center text-xl">
+      <div className="relative z-10 py-20 px-8 xs:px-4 grid place-items-center text-xl">
         <m.div
           initial={scale(0)}
           transition={trans}
           whileInView={scale(1)}
           viewport={{ once: true, amount: 0.8 }}
-          className="p-8 relative bg-primary text-background text-center"
+          className="p-8 xs:p-6 relative bg-primary text-background text-center"
         >
           <m.div
             initial={scale(0)}
@@ -37,7 +37,7 @@ export default function Footer({ m }) {
             viewport={{ once: true, amount: 0.8 }}
             className="text-sm my-4 italic"
           >
-            Hormat Kami Mengundang
+            Hormat Kami
           </m.div>
           <m.div
             initial={{ y: "-100%", opacity: 0 }}

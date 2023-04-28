@@ -32,14 +32,14 @@ export default function Gift({ m }) {
           backgroundPosition: "center",
         }}
       ></div>
-      <div className="relative z-10 grid place-items-center text-primary text-center font-semibold antialiased py-8">
+      <div className="relative z-10 grid place-items-center text-primary text-center font-semibold antialiased py-8 px-8 xs:px-4">
         <div>
           <m.div
             initial={scale(0)}
             transition={trans}
             whileInView={scale(1)}
             viewport={{ once: true, amount: 0.8 }}
-            className="relative flex flex-col justify-center items-center mx-4 p-4 backdrop-filter backdrop-brightness-[.75] mb-2"
+            className="relative flex flex-col justify-center items-center p-4 backdrop-filter backdrop-brightness-[.75] mb-2"
           >
             <m.div
               initial={scale(0)}
@@ -53,18 +53,18 @@ export default function Gift({ m }) {
               transition={{ ...trans, delay: 0.8 }}
               whileInView={scale(1)}
               viewport={{ once: true, amount: 0.8 }}
-              className="text-2xl"
+              className="text-2xl xs:text-xl"
             >
               Kirim Hadiah
             </m.div>
           </m.div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 xs:gap-1">
             <m.div
               initial={scale(0)}
               transition={{ ...trans, delay: 1 }}
               whileInView={scale(1)}
               viewport={{ once: true, amount: 0.8 }}
-              className="relative flex flex-col justify-center items-center ml-4 p-4 w-1/2 backdrop-filter backdrop-brightness-[.75]"
+              className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter backdrop-brightness-[.75]"
             >
               <m.div
                 initial={scale(0)}
@@ -79,14 +79,14 @@ export default function Gift({ m }) {
                 whileInView={scale(1)}
                 viewport={{ once: true, amount: 0.8 }}
                 src="./bca.svg"
-                className="h-20 w-20 animate-pulse"
+                className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse"
               />
               <m.div
                 initial={scale(0)}
                 transition={{ ...trans, delay: 2 }}
                 whileInView={scale(1)}
                 viewport={{ once: true, amount: 0.8 }}
-                className="text-md font-fira"
+                className="text-md font-fira xs:text-sm"
               >
                 a/n Rafli Rachmawandi
               </m.div>
@@ -95,12 +95,12 @@ export default function Gift({ m }) {
                 transition={{ ...trans, delay: 2.2 }}
                 whileInView={scale(1)}
                 viewport={{ once: true, amount: 0.8 }}
-                className="mb-1 text-lg"
+                className="mb-1 text-lg xs:text-sm"
               >
                 2832342361
               </m.div>
               <button
-                className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
+                className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
                 onClick={handleOnClick}
               >
                 <m.div
@@ -137,7 +137,7 @@ export default function Gift({ m }) {
               transition={{ ...trans, delay: 2 }}
               whileInView={scale(1)}
               viewport={{ once: true, amount: 0.8 }}
-              className="relative flex flex-col justify-center items-center mr-4 p-4 w-1/2 backdrop-filter backdrop-brightness-[.75]"
+              className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter backdrop-brightness-[.75]"
             >
               <m.div
                 initial={scale(0)}
@@ -152,28 +152,28 @@ export default function Gift({ m }) {
                 whileInView={scale(1)}
                 viewport={{ once: true, amount: 0.8 }}
                 src="./bca.svg"
-                className="h-20 w-20 animate-pulse"
+                className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse"
               />
               <m.div
                 initial={scale(0)}
                 transition={{ ...trans, delay: 3 }}
                 whileInView={scale(1)}
                 viewport={{ once: true, amount: 0.8 }}
-                className="text-md font-fira"
+                className="text-md font-fira xs:text-sm"
               >
-                a/n Rakananda Alysa Indioka
+                a/n Rakananda Alysa
               </m.div>
               <m.div
                 initial={scale(0)}
                 transition={{ ...trans, delay: 3.2 }}
                 whileInView={scale(1)}
                 viewport={{ once: true, amount: 0.8 }}
-                className="mb-1 text-lg"
+                className="mb-1 text-lg xs:text-sm"
               >
                 7401814837
               </m.div>
               <button
-                className="text-sm border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
+                className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
                 onClick={handleOnClick2}
               >
                 <m.div
@@ -211,7 +211,7 @@ export default function Gift({ m }) {
             transition={{ ...trans, delay: 3 }}
             whileInView={scale(1)}
             viewport={{ once: true, amount: 0.8 }}
-            className="relative flex flex-col justify-center items-center mx-4 p-4 backdrop-filter backdrop-brightness-[.75] mt-4"
+            className="relative flex flex-col justify-center items-center p-4 backdrop-filter backdrop-brightness-[.75] mt-4"
           >
             <m.div
               initial={scale(0)}
@@ -225,7 +225,7 @@ export default function Gift({ m }) {
               transition={{ ...trans, delay: 3.8 }}
               whileInView={scale(1)}
               viewport={{ once: true, amount: 0.8 }}
-              className="text-xl"
+              className="text-xl xs:text-lg"
             >
               Alamat
             </m.div>
@@ -234,7 +234,7 @@ export default function Gift({ m }) {
               transition={{ ...trans, delay: 4 }}
               whileInView={scale(1)}
               viewport={{ once: true, amount: 0.8 }}
-              className="font-fira text-sm"
+              className="font-fira text-sm xs:text-xs"
             >
               Komplek Abdi Negara D7 No 36 RT 02 RW 13 Desa Rancaekek Kec.
               Rancaekek Wetan

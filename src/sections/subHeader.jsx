@@ -4,13 +4,13 @@ export default function SubHeader({ m }) {
   return (
     <div className="relative">
       <div className="absolute inset-0 bg-fixed bg-cover"></div>
-      <div className="relative z-10 py-20 px-8 grid place-items-center text-xl italic">
+      <div className="relative z-10 py-20 px-8 xs:px-4 grid place-items-center text-xl xs:text-lg italic">
         <m.div
           initial={scale(0)}
           transition={{ ...trans }}
           whileInView={scale(1)}
           viewport={{ once: true, amount: 0.8 }}
-          className="p-8 relative bg-primary text-background"
+          className="p-8 xs:p-6 relative bg-primary text-background"
         >
           <m.div
             initial={scale(0)}

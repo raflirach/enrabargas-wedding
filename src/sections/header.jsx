@@ -71,12 +71,12 @@ export default function Header({ m }) {
               duration: 2,
               delay: 2,
             }}
-            className="text-2xl"
+            className="text-2xl xs:text-xl"
           >
             The Wedding Of
           </m.div>
         </div>
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-center items-center">
           <m.div
             initial={{ x: "-120%", opacity: 0 }}
             animate={{ x: "0%", opacity: 1 }}
@@ -86,7 +86,7 @@ export default function Header({ m }) {
               duration: 2,
               delay: 2.3,
             }}
-            className="absolute text-5xl top-0 right-4 overflow-hidden"
+            className="absolute text-5xl xs:text-4xl -bottom-2 right-4 overflow-hidden"
           >
             R
           </m.div>
@@ -99,7 +99,7 @@ export default function Header({ m }) {
               duration: 2,
               delay: 2.3,
             }}
-            className="absolute text-7xl"
+            className="absolute text-7xl xs:text-6xl"
           >
             /
           </m.div>
@@ -112,7 +112,7 @@ export default function Header({ m }) {
               duration: 2,
               delay: 2.3,
             }}
-            className="absolute text-5xl top-8 left-4"
+            className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden"
           >
             R
           </m.div>
@@ -127,7 +127,7 @@ export default function Header({ m }) {
               duration: 2,
               delay: 2.6,
             }}
-            className="text-4xl mb-2"
+            className="text-4xl xs:text-3xl mb-2"
           >
             Rafli & Raka
           </m.div>
@@ -153,7 +153,7 @@ export default function Header({ m }) {
                   duration: 2,
                   delay: 2.9,
                 }}
-                className="text-4xl tracking-widest font-light mb-6 flex justify-center items-center"
+                className="text-4xl xs:text-3xl tracking-widest font-light mb-6 flex justify-center items-center"
               >
                 <m.span>{rounded}</m.span> <span className="mx-2">.</span>{" "}
                 <m.span>{rounded2}</m.span> <span className="mx-2">.</span>{" "}
@@ -171,7 +171,7 @@ export default function Header({ m }) {
               >
                 <Link
                   href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MDBvaDBwdjEyMGV1Y3NoaTcxdjRjbXE3ODIgcmFmbGkwNjAzOTVAbQ&amp;tmsrc=rafli060395%40gmail.com"
-                  className="text-2xl border px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30"
+                  className="text-2xl xs:text-xl border px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30"
                 >
                   Save the date
                 </Link>
