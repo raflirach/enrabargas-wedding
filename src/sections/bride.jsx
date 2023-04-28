@@ -18,7 +18,7 @@ export default function Bride({ m }) {
           transition={trans}
           whileInView={scale(1)}
           viewport={{ once: true, amount: 0.8 }}
-          className="relative flex flex-col justify-center items-center p-8 backdrop-filter backdrop-brightness-[.75]"
+          className="relative flex flex-col justify-center items-center p-8 backdrop-filter bg-background/40 backdrop-brightness-[.75]"
         >
           <m.div
             initial={scale(0)}

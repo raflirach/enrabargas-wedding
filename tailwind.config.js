@@ -20,6 +20,9 @@ module.exports = {
         // background: "#810CA8",
         // primary: "#E5B8F4",
         // secondary: "#C147E9"
+        // background: "#343a40",
+        // primary: "#6c757d",
+        // secondary: "#495057"
       },
       fontFamily: {
         alice: ["Alice", "serif"],

@@ -20,7 +20,7 @@ export default function Event({ m }) {
             transition={trans}
             whileInView={scale(1)}
             viewport={{ once: true, amount: 0.8 }}
-            className="relative flex flex-col justify-center items-center p-8 backdrop-filter backdrop-brightness-[.75] mb-2"
+            className="relative flex flex-col justify-center items-center p-8 backdrop-filter bg-background/40 backdrop-brightness-[.75] mb-2"
           >
             <m.div
               initial={scale(0)}
@@ -162,7 +162,7 @@ export default function Event({ m }) {
             transition={trans}
             whileInView={scale(1)}
             viewport={{ once: true, amount: 0.8 }}
-            className="relative flex flex-col justify-center items-center p-8 backdrop-filter backdrop-brightness-[.75]"
+            className="relative flex flex-col justify-center items-center p-8 backdrop-filter bg-background/40 backdrop-brightness-[.75]"
           >
             <m.div
               initial={scale(0)}
@@ -241,7 +241,7 @@ export default function Event({ m }) {
               viewport={{ once: true, amount: 0.8 }}
               className="text-lg xs:text-md font-fira"
             >
-              11.00 ~ Selesai
+              11.00 ~ 14.00
             </m.div>
             <m.div
               initial={{ y: "-100%", opacity: 0 }}

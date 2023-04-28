@@ -39,7 +39,7 @@ export default function Gift({ m }) {
             transition={trans}
             whileInView={scale(1)}
             viewport={{ once: true, amount: 0.8 }}
-            className="relative flex flex-col justify-center items-center p-4 backdrop-filter backdrop-brightness-[.75] mb-2"
+            className="relative flex flex-col justify-center items-center p-4 backdrop-filter bg-background/40 backdrop-brightness-[.75] mb-2"
           >
             <m.div
               initial={scale(0)}
@@ -64,7 +64,7 @@ export default function Gift({ m }) {
               transition={{ ...trans, delay: 1 }}
               whileInView={scale(1)}
               viewport={{ once: true, amount: 0.8 }}
-              className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter backdrop-brightness-[.75]"
+              className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter bg-background/40 backdrop-brightness-[.75]"
             >
               <m.div
                 initial={scale(0)}
@@ -137,7 +137,7 @@ export default function Gift({ m }) {
               transition={{ ...trans, delay: 2 }}
               whileInView={scale(1)}
               viewport={{ once: true, amount: 0.8 }}
-              className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter backdrop-brightness-[.75]"
+              className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter bg-background/40 backdrop-brightness-[.75]"
             >
               <m.div
                 initial={scale(0)}
@@ -211,7 +211,7 @@ export default function Gift({ m }) {
             transition={{ ...trans, delay: 3 }}
             whileInView={scale(1)}
             viewport={{ once: true, amount: 0.8 }}
-            className="relative flex flex-col justify-center items-center p-4 backdrop-filter backdrop-brightness-[.75] mt-4"
+            className="relative flex flex-col justify-center items-center p-4 backdrop-filter bg-background/40 backdrop-brightness-[.75] mt-4"
           >
             <m.div
               initial={scale(0)}
