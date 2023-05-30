@@ -9,6 +9,12 @@ export default function Opening({ handleOnOpen, transition }) {
   return (
     <motion.div
       className="absolute bg-background z-50 h-screen xs:px-4 px-8 grid place-items-center text-xl max-w-[640px]"
+      style={{
+        backgroundImage: `url("https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")`,
+        backgroundSize: "auto",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
       variants={transition}
     >
       <div className="p-8 xs:p-4 relative bg-primary text-background text-center font-alice">

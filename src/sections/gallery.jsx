@@ -5,9 +5,16 @@ import { useDrag } from "react-use-gesture";
 import styles from "../styles/gallery.module.css";
 
 const cards = [
-  "https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-  "https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-  "https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+  "foto/DSC_0172.jpg",
+  "foto/DSC_0038.jpg",
+  "foto/DSC_0058.jpg",
+  "foto/DSC_0065.jpg",
+  "foto/DSC_0072.jpg",
+  "foto/DSC_0142.jpg",
+  "foto/DSC_0198.jpg",
+  "foto/DSC_0044.jpg",
+  "foto/DSC_0103.jpg",
+  "foto/DSC_0119.jpg",
 ];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css

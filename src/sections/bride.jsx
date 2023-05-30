@@ -6,7 +6,7 @@ export default function Bride({ m }) {
       <div
         className="absolute inset-0 bg-fixed bg-cover"
         style={{
-          backgroundImage: `url("https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")`,
+          backgroundImage: `url("https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")`,
           backgroundSize: "auto",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
