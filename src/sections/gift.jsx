@@ -1,4 +1,4 @@
-import { scale, trans } from "@/helpers/utils";
+import { vScale } from "@/helpers/utils";
 import { useState } from "react";
 
 export default function Gift({ m }) {
@@ -34,81 +34,19 @@ export default function Gift({ m }) {
       ></div>
       <div className="relative z-10 grid place-items-center text-primary text-center font-semibold antialiased py-8 px-8 xs:px-4">
         <div>
-          <m.div
-            initial={scale(0)}
-            transition={trans}
-            whileInView={scale(1)}
-            viewport={{ once: true, amount: 0.8 }}
-            className="relative flex flex-col justify-center items-center p-4 backdrop-filter bg-background/40 backdrop-brightness-[.75] mb-2"
-          >
-            <m.div
-              initial={scale(0)}
-              transition={{ ...trans, delay: 0.5 }}
-              whileInView={scale(1)}
-              viewport={{ once: true, amount: 0.8 }}
-              className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary"
-            />
-            <m.div
-              initial={scale(0)}
-              transition={{ ...trans, delay: 0.8 }}
-              whileInView={scale(1)}
-              viewport={{ once: true, amount: 0.8 }}
-              className="text-2xl xs:text-xl"
-            >
-              Kirim Hadiah
-            </m.div>
+          <m.div custom={0} initial="init" whileInView="anim" variants={vScale} className="relative flex flex-col justify-center items-center p-4 backdrop-filter bg-background/40 backdrop-brightness-[.75] mb-2">
+            <m.div custom={1} initial="init" whileInView="anim" variants={vScale} className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary" />
+            <m.div custom={2} initial="init" whileInView="anim" variants={vScale} className="text-2xl xs:text-xl"> Kirim Hadiah </m.div>
           </m.div>
           <div className="flex gap-2 xs:gap-1">
-            <m.div
-              initial={scale(0)}
-              transition={{ ...trans, delay: 1 }}
-              whileInView={scale(1)}
-              viewport={{ once: true, amount: 0.8 }}
-              className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter bg-background/40 backdrop-brightness-[.75]"
+            <m.div custom={3} initial="init" whileInView="anim" variants={vScale} className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter bg-background/40 backdrop-brightness-[.75]"
             >
-              <m.div
-                initial={scale(0)}
-                transition={{ ...trans, delay: 1.5 }}
-                whileInView={scale(1)}
-                viewport={{ once: true, amount: 0.8 }}
-                className="absolute border-2 border-solid w-full h-full top-2 -left-2 border-primary"
-              />
-              <m.img
-                initial={scale(0)}
-                transition={{ ...trans, delay: 1.8 }}
-                whileInView={scale(1)}
-                viewport={{ once: true, amount: 0.8 }}
-                src="./bca.svg"
-                className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse"
-              />
-              <m.div
-                initial={scale(0)}
-                transition={{ ...trans, delay: 2 }}
-                whileInView={scale(1)}
-                viewport={{ once: true, amount: 0.8 }}
-                className="text-md font-fira xs:text-sm"
-              >
-                a/n Rafli Rachmawandi
-              </m.div>
-              <m.div
-                initial={scale(0)}
-                transition={{ ...trans, delay: 2.2 }}
-                whileInView={scale(1)}
-                viewport={{ once: true, amount: 0.8 }}
-                className="mb-1 text-lg xs:text-sm"
-              >
-                2832342361
-              </m.div>
-              <button
-                className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
-                onClick={handleOnClick}
-              >
-                <m.div
-                  initial={scale(0)}
-                  transition={{ ...trans, delay: 2.4 }}
-                  whileInView={scale(1)}
-                  viewport={{ once: true, amount: 0.8 }}
-                  className="flex justify-center items-center gap-1"
+              <m.div custom={4} initial="init" whileInView="anim" variants={vScale} className="absolute border-2 border-solid w-full h-full top-2 -left-2 border-primary" />
+              <m.img custom={5} initial="init" whileInView="anim" variants={vScale} src="./bca.svg" className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse" />
+              <m.div custom={6} initial="init" whileInView="anim" variants={vScale} className="text-md font-fira xs:text-sm"> a/n Rafli Rachmawandi </m.div>
+              <m.div custom={7} initial="init" whileInView="anim" variants={vScale} className="mb-1 text-lg xs:text-sm"> 2832342361 </m.div>
+              <button className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10" onClick={handleOnClick}>
+                <m.div custom={8} initial="init" whileInView="anim" variants={vScale} className="flex justify-center items-center gap-1"
                 >
                   <svg
                     fill="currentColor"
@@ -132,57 +70,13 @@ export default function Gift({ m }) {
                 </m.div>
               </button>
             </m.div>
-            <m.div
-              initial={scale(0)}
-              transition={{ ...trans, delay: 2 }}
-              whileInView={scale(1)}
-              viewport={{ once: true, amount: 0.8 }}
-              className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter bg-background/40 backdrop-brightness-[.75]"
-            >
-              <m.div
-                initial={scale(0)}
-                transition={{ ...trans, delay: 2.5 }}
-                whileInView={scale(1)}
-                viewport={{ once: true, amount: 0.8 }}
-                className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary"
-              />
-              <m.img
-                initial={scale(0)}
-                transition={{ ...trans, delay: 2.8 }}
-                whileInView={scale(1)}
-                viewport={{ once: true, amount: 0.8 }}
-                src="./bca.svg"
-                className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse"
-              />
-              <m.div
-                initial={scale(0)}
-                transition={{ ...trans, delay: 3 }}
-                whileInView={scale(1)}
-                viewport={{ once: true, amount: 0.8 }}
-                className="text-md font-fira xs:text-sm"
-              >
-                a/n Rakananda Alysa
-              </m.div>
-              <m.div
-                initial={scale(0)}
-                transition={{ ...trans, delay: 3.2 }}
-                whileInView={scale(1)}
-                viewport={{ once: true, amount: 0.8 }}
-                className="mb-1 text-lg xs:text-sm"
-              >
-                7401814837
-              </m.div>
-              <button
-                className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
-                onClick={handleOnClick2}
-              >
-                <m.div
-                  initial={scale(0)}
-                  transition={{ ...trans, delay: 3.4 }}
-                  whileInView={scale(1)}
-                  viewport={{ once: true, amount: 0.8 }}
-                  className="flex justify-center items-center gap-1"
-                >
+            <m.div custom={3} initial="init" whileInView="anim" variants={vScale} className="relative flex flex-col justify-center items-center p-4 xs:p-3 w-1/2 backdrop-filter bg-background/40 backdrop-brightness-[.75]">
+              <m.div custom={4} initial="init" whileInView="anim" variants={vScale} className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
+              <m.img custom={5} initial="init" whileInView="anim" variants={vScale} src="./bca.svg" className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse" />
+              <m.div custom={6} initial="init" whileInView="anim" variants={vScale} className="text-md font-fira xs:text-sm"> a/n Rakananda Alysa </m.div>
+              <m.div custom={7} initial="init" whileInView="anim" variants={vScale} className="mb-1 text-lg xs:text-sm"> 7401814837 </m.div>
+              <button className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10" onClick={handleOnClick2}>
+                <m.div custom={8} initial="init" whileInView="anim" variants={vScale} className="flex justify-center items-center gap-1">
                   <svg
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -206,36 +100,10 @@ export default function Gift({ m }) {
               </button>
             </m.div>
           </div>
-          <m.div
-            initial={scale(0)}
-            transition={{ ...trans, delay: 3 }}
-            whileInView={scale(1)}
-            viewport={{ once: true, amount: 0.8 }}
-            className="relative flex flex-col justify-center items-center p-4 backdrop-filter bg-background/40 backdrop-brightness-[.75] mt-4"
-          >
-            <m.div
-              initial={scale(0)}
-              transition={{ ...trans, delay: 3.5 }}
-              whileInView={scale(1)}
-              viewport={{ once: true, amount: 0.8 }}
-              className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary"
-            />
-            <m.div
-              initial={scale(0)}
-              transition={{ ...trans, delay: 3.8 }}
-              whileInView={scale(1)}
-              viewport={{ once: true, amount: 0.8 }}
-              className="text-xl xs:text-lg"
-            >
-              Alamat
-            </m.div>
-            <m.div
-              initial={scale(0)}
-              transition={{ ...trans, delay: 4 }}
-              whileInView={scale(1)}
-              viewport={{ once: true, amount: 0.8 }}
-              className="font-fira text-sm xs:text-xs"
-            >
+          <m.div custom={9} initial="init" whileInView="anim" variants={vScale} className="relative flex flex-col justify-center items-center p-4 backdrop-filter bg-background/40 backdrop-brightness-[.75] mt-4">
+            <m.div custom={10} initial="init" whileInView="anim" variants={vScale} className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
+            <m.div custom={11} initial="init" whileInView="anim" variants={vScale} className="text-xl xs:text-lg"> Alamat </m.div>
+            <m.div custom={12} initial="init" whileInView="anim" variants={vScale} className="font-fira text-sm xs:text-xs">
               Komplek Abdi Negara D7 No 36 RT 02 RW 13 Desa Rancaekek Kec.
               Rancaekek Wetan
             </m.div>

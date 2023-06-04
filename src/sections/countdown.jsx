@@ -1,6 +1,6 @@
 import { CountdownTimer } from "@/components/countDownTimer";
 import { getTargetDate } from "@/helpers/formatDate";
-import { scale, trans } from "@/helpers/utils";
+import { vScale } from "@/helpers/utils";
 import { useEffect, useState } from "react";
 
 export default function Countdown({ m }) {
@@ -15,29 +15,9 @@ export default function Countdown({ m }) {
   return (
     <div className="relative">
       <div className="relative z-10 py-20 px-8 grid place-items-center text-xl">
-        <m.div
-          initial={scale(0)}
-          transition={{ ...trans }}
-          whileInView={scale(1)}
-          viewport={{ once: true, amount: 0.8 }}
-          className="text-2xl xs:text-xl mb-10"
-        >
-          15 Juli 2023
-        </m.div>
-        <m.div
-          initial={scale(0)}
-          transition={{ ...trans, delay: 0.5 }}
-          whileInView={scale(1)}
-          viewport={{ once: true, amount: 0.8 }}
-          className="relative bg-primary text-background"
-        >
-          <m.div
-            initial={scale(0)}
-            transition={{ ...trans, delay: 0.8 }}
-            whileInView={scale(1)}
-            viewport={{ once: true, amount: 0.8 }}
-            className="w-full h-full border-2 border-secondary absolute top-[0.375rem] left-[0.375rem]"
-          />
+        <m.div custom={0} initial="init" whileInView="anim" variants={vScale} className="text-2xl xs:text-xl mb-10"> 15 Juli 2023 </m.div>
+        <m.div custom={1} initial="init" whileInView="anim" variants={vScale} className="relative bg-primary text-background">
+          <m.div custom={2} initial="init" whileInView="anim" variants={vScale} className="w-full h-full border-2 border-secondary absolute top-[0.375rem] left-[0.375rem]" />
           <CountdownTimer targetDate={countdown} m={m} />
         </m.div>
       </div>

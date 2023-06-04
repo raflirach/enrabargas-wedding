@@ -1,3 +1,4 @@
+import { vFadeInBottom, vFadeInLeft, vFadeInRight, vFadeInTop, vShowInRight } from "@/helpers/utils";
 import { useTransition, animated } from "@react-spring/web";
 import {
   animate,
@@ -47,8 +48,8 @@ export default function Header({ m }) {
   useEffect(() => {
     setTimeout(() => {
       const animation = animate(count, 15, { duration: 2 });
-      const animation2 = animate(count2, 7, { duration: 4 });
-      const animation3 = animate(count3, 2023, { duration: 7 });
+      const animation2 = animate(count2, 7, { duration: 3 });
+      const animation3 = animate(count3, 2023, { duration: 4 });
 
       return [animation.stop, animation2.stop, animation3.stop];
     }, 4000);
@@ -68,115 +69,26 @@ export default function Header({ m }) {
           }}
         />
       ))}
-      <div className="relative z-10 h-screen grid place-items-center text-center font-alice backdrop-filter backdrop-brightness-[.90] text-primary antialiased">
+      <m.div className="relative z-10 h-screen grid place-items-center text-center font-alice backdrop-filter backdrop-brightness-[.90] text-primary antialiased">
         <div className="w-3/4 py-2 px-2 rounded-lg overflow-hidden">
-          <m.div
-            initial={{ y: "-120%" }}
-            animate={{ y: "0%" }}
-            transition={{
-              type: "spring",
-              stiffness: 40,
-              duration: 2,
-              delay: 2,
-            }}
-            className="text-2xl xs:text-xl"
-          >
-            The Wedding Of
-          </m.div>
+          <m.div custom={10} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-2xl xs:text-xl">The Wedding Of</m.div>
         </div>
         <div className="relative flex justify-center items-center">
-          <m.div
-            initial={{ x: "-120%", opacity: 0 }}
-            animate={{ x: "0%", opacity: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 40,
-              duration: 2,
-              delay: 2.3,
-            }}
-            className="absolute text-5xl xs:text-4xl -bottom-2 right-4 overflow-hidden"
-          >
-            R
-          </m.div>
-          <m.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 40,
-              duration: 2,
-              delay: 2.3,
-            }}
-            className="absolute text-7xl xs:text-6xl"
-          >
-            /
-          </m.div>
-          <m.div
-            initial={{ x: "120%", opacity: 0 }}
-            animate={{ x: "0%", opacity: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 40,
-              duration: 2,
-              delay: 2.3,
-            }}
-            className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden"
-          >
-            R
-          </m.div>
+          <m.div custom={11} initial="init" whileInView="anim" variants={vFadeInRight} className="absolute text-5xl xs:text-4xl -bottom-2 right-4 overflow-hidden">R</m.div>
+          <m.div custom={11} initial="init" whileInView="anim" variants={vFadeInTop} className="absolute text-7xl xs:text-6xl">/</m.div>
+          <m.div custom={11} initial="init" whileInView="anim" variants={vFadeInLeft} className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden">R</m.div>
         </div>
         <div className="overflow-hidden">
-          <m.div
-            initial={{ y: "120%", opacity: 0 }}
-            animate={{ y: "0%", opacity: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 40,
-              duration: 2,
-              delay: 2.6,
-            }}
-            className="text-4xl xs:text-3xl mb-2"
-          >
-            Rafli & Raka
-          </m.div>
-          <m.div
-            initial={{ x: "-100%" }}
-            animate={{ x: "0%" }}
-            transition={{
-              type: "spring",
-              stiffness: 10,
-              duration: 10,
-              delay: 3,
-            }}
-            className="border-b border-primary"
-          ></m.div>
+          <m.div custom={12} initial="init" whileInView="anim" variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">Rafli & Raka</m.div>
+          <m.div custom={12} initial="init" whileInView="anim" variants={vShowInRight} className="border-b border-primary"></m.div>
           <div className="flex justify-center items-center w-full">
             <div className="py-2">
-              <m.div
-                initial={{ y: "120%", opacity: 0 }}
-                animate={{ y: "0%", opacity: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 40,
-                  duration: 2,
-                  delay: 2.9,
-                }}
-                className="text-4xl xs:text-3xl tracking-widest font-light mb-6 flex justify-center items-center"
-              >
+              <m.div custom={13} initial="init" whileInView="anim" variants={vFadeInTop} className="text-4xl xs:text-3xl tracking-widest font-light mb-6 flex justify-center items-center">
                 <m.span>{rounded}</m.span> <span className="mx-2">.</span>{" "}
                 <m.span>{rounded2}</m.span> <span className="mx-2">.</span>{" "}
                 <m.span>{rounded3}</m.span>
               </m.div>
-              <m.div
-                initial={{ y: "120%", opacity: 0 }}
-                animate={{ y: "0%", opacity: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 40,
-                  duration: 2,
-                  delay: 3.2,
-                }}
-              >
+              <m.div custom={14} initial="init" whileInView="anim" variants={vFadeInTop}>
                 <Link
                   href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MDBvaDBwdjEyMGV1Y3NoaTcxdjRjbXE3ODIgcmFmbGkwNjAzOTVAbQ&amp;tmsrc=rafli060395%40gmail.com"
                   className="text-2xl xs:text-xl border px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30"
@@ -187,7 +99,7 @@ export default function Header({ m }) {
             </div>
           </div>
         </div>
-      </div>
+      </m.div>
     </div>
   );
 }
