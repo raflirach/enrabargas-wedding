@@ -15,22 +15,22 @@ export default function Event({ m }) {
       ></div>
       <m.div className="relative z-10 grid place-items-center text-primary text-center font-semibold antialiased py-8 px-8 xs:px-4">
         <div>
-          <m.div custom={0} initial="init" whileInView="anim" variants={vScale} className="relative flex flex-col justify-center items-center p-8 backdrop-filter bg-background/40 backdrop-brightness-[.75] mb-2">
-            <m.div custom={1} initial="init" whileInView="anim" variants={vScale} className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary"/>
-            <m.img custom={2} initial="init" whileInView="anim" variants={vScale} src="./ring.svg" className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow"/>
-            <m.div custom={3} initial="init" whileInView="anim" variants={vFadeInBottom} className="mb-1 text-2xl xs:text-xl"> Akad Nikah </m.div>
+          <m.div custom={0} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="relative flex flex-col justify-center items-center p-8 backdrop-filter bg-background/40 backdrop-brightness-[.75] mb-2">
+            <m.div custom={1} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary"/>
+            <m.img custom={2} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} src="./ring.svg" className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow"/>
+            <m.div custom={3} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="mb-1 text-2xl xs:text-xl"> Akad Nikah </m.div>
             <div className="flex justify-evenly w-full items-center">
-              <m.div custom={4} initial="init" whileInView="anim" variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> Sabtu </m.div>
-              <m.div custom={4} initial="init" whileInView="anim" variants={vScale} className="flex flex-col border-r border-l border-primary px-5 w-1/3">
-                <m.div custom={5} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-4xl xs:text-3xl leading-6 xs:leading-4"> 15 </m.div>
-                <m.div custom={6} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-2xl xs:text-xl"> 2023 </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> Sabtu </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex flex-col border-r border-l border-primary px-5 w-1/3">
+                <m.div custom={5} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-4xl xs:text-3xl leading-6 xs:leading-4"> 15 </m.div>
+                <m.div custom={6} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl"> 2023 </m.div>
               </m.div>
-              <m.div custom={4} initial="init" whileInView="anim" variants={vFadeInLeft} className="text-xl xs:text-lg w-1/3"> Juli </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="text-xl xs:text-lg w-1/3"> Juli </m.div>
             </div>
-            <m.div custom={7} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-lg xs:text-md font-fira"> 09.00 ~ Selesai </m.div>
-            <m.div custom={8} initial="init" whileInView="anim" variants={vFadeInBottom} className="my-2 text-lg xs:text-md"> Alamat </m.div>
-            <m.div custom={9} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-xl xs:text-lg"> Imah Asta </m.div>
-            <m.div custom={10} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-md xs:text-sm font-fira">
+            <m.div custom={7} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-lg xs:text-md font-fira"> 09.00 ~ Selesai </m.div>
+            <m.div custom={8} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="my-2 text-lg xs:text-md"> Alamat </m.div>
+            <m.div custom={9} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-xl xs:text-lg"> Imah Asta </m.div>
+            <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-md xs:text-sm font-fira">
               Babakan Asta, Bojongloa, Kec. Rancaekek, Kabupaten Bandung, Jawa
               Barat 40394
             </m.div>
@@ -38,7 +38,7 @@ export default function Event({ m }) {
               href="https://goo.gl/maps/gQqrnGf6fYyN2vc97"
               className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
             >
-              <m.div custom={11} initial="init" whileInView="anim" variants={vScale} className="flex justify-center items-center gap-1">
+              <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex justify-center items-center gap-1">
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -56,22 +56,22 @@ export default function Event({ m }) {
               </m.div>
             </Link>
           </m.div>
-          <m.div custom={0} initial="init" whileInView="anim" variants={vScale} className="relative flex flex-col justify-center items-center p-8 backdrop-filter bg-background/40 backdrop-brightness-[.75]">
-            <m.div custom={1} initial="init" whileInView="anim" variants={vScale} className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
-            <m.img custom={2} initial="init" whileInView="anim" variants={vScale} src="./rose.svg" className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow" />
-            <m.div custom={3} initial="init" whileInView="anim" variants={vFadeInBottom} className="mb-1 text-2xl xs:text-xl"> Resepsi </m.div>
+          <m.div custom={0} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="relative flex flex-col justify-center items-center p-8 backdrop-filter bg-background/40 backdrop-brightness-[.75]">
+            <m.div custom={1} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
+            <m.img custom={2} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} src="./rose.svg" className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow" />
+            <m.div custom={3} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="mb-1 text-2xl xs:text-xl"> Resepsi </m.div>
             <div className="flex justify-evenly w-full items-center">
-              <m.div custom={4} initial="init" whileInView="anim" variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> Sabtu </m.div>
-              <m.div custom={4} initial="init" whileInView="anim" variants={vScale} className="flex flex-col border-r border-l border-primary px-5 w-1/3" >
-                <m.div custom={5} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-4xl xs:text-3xl leading-6 xs:leading-4"> 15 </m.div>
-                <m.div custom={6} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-2xl xs:text-xl"> 2023 </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> Sabtu </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex flex-col border-r border-l border-primary px-5 w-1/3" >
+                <m.div custom={5} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-4xl xs:text-3xl leading-6 xs:leading-4"> 15 </m.div>
+                <m.div custom={6} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl"> 2023 </m.div>
               </m.div>
-              <m.div custom={4} initial="init" whileInView="anim" variants={vFadeInLeft} className="text-xl xs:text-lg w-1/3"> Juli </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="text-xl xs:text-lg w-1/3"> Juli </m.div>
             </div>
-            <m.div custom={7} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-lg xs:text-md font-fira"> 11.00 ~ 14.00 </m.div>
-            <m.div custom={8} initial="init" whileInView="anim" variants={vFadeInBottom} className="my-2 text-lg xs:text-md"> Alamat </m.div>
-            <m.div custom={9} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-xl xs:text-lg"> Imah Asta </m.div>
-            <m.div custom={10} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-md xs:text-sm font-fira">
+            <m.div custom={7} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-lg xs:text-md font-fira"> 11.00 ~ 14.00 </m.div>
+            <m.div custom={8} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="my-2 text-lg xs:text-md"> Alamat </m.div>
+            <m.div custom={9} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-xl xs:text-lg"> Imah Asta </m.div>
+            <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-md xs:text-sm font-fira">
               Babakan Asta, Bojongloa, Kec. Rancaekek, Kabupaten Bandung, Jawa
               Barat 40394
             </m.div>
@@ -79,7 +79,7 @@ export default function Event({ m }) {
               href="https://goo.gl/maps/gQqrnGf6fYyN2vc97"
               className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
             >
-              <m.div custom={11} initial="init" whileInView="anim" variants={vScale} className="flex justify-center items-center gap-1">
+              <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex justify-center items-center gap-1">
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"

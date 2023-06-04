@@ -71,24 +71,24 @@ export default function Header({ m }) {
       ))}
       <m.div className="relative z-10 h-screen grid place-items-center text-center font-alice backdrop-filter backdrop-brightness-[.90] text-primary antialiased">
         <div className="w-3/4 py-2 px-2 rounded-lg overflow-hidden">
-          <m.div custom={10} initial="init" whileInView="anim" variants={vFadeInBottom} className="text-2xl xs:text-xl">The Wedding Of</m.div>
+          <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl">The Wedding Of</m.div>
         </div>
         <div className="relative flex justify-center items-center">
-          <m.div custom={11} initial="init" whileInView="anim" variants={vFadeInRight} className="absolute text-5xl xs:text-4xl -bottom-2 right-4 overflow-hidden">R</m.div>
-          <m.div custom={11} initial="init" whileInView="anim" variants={vFadeInTop} className="absolute text-7xl xs:text-6xl">/</m.div>
-          <m.div custom={11} initial="init" whileInView="anim" variants={vFadeInLeft} className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden">R</m.div>
+          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="absolute text-5xl xs:text-4xl -bottom-2 right-4 overflow-hidden">R</m.div>
+          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="absolute text-7xl xs:text-6xl">/</m.div>
+          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden">R</m.div>
         </div>
         <div className="overflow-hidden">
-          <m.div custom={12} initial="init" whileInView="anim" variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">Rafli & Raka</m.div>
-          <m.div custom={12} initial="init" whileInView="anim" variants={vShowInRight} className="border-b border-primary"></m.div>
+          <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">Rafli & Raka</m.div>
+          <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vShowInRight} className="border-b border-primary"></m.div>
           <div className="flex justify-center items-center w-full">
             <div className="py-2">
-              <m.div custom={13} initial="init" whileInView="anim" variants={vFadeInTop} className="text-4xl xs:text-3xl tracking-widest font-light mb-6 flex justify-center items-center">
+              <m.div custom={13} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="text-4xl xs:text-3xl tracking-widest font-light mb-6 flex justify-center items-center">
                 <m.span>{rounded}</m.span> <span className="mx-2">.</span>{" "}
                 <m.span>{rounded2}</m.span> <span className="mx-2">.</span>{" "}
                 <m.span>{rounded3}</m.span>
               </m.div>
-              <m.div custom={14} initial="init" whileInView="anim" variants={vFadeInTop}>
+              <m.div custom={14} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}>
                 <Link
                   href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MDBvaDBwdjEyMGV1Y3NoaTcxdjRjbXE3ODIgcmFmbGkwNjAzOTVAbQ&amp;tmsrc=rafli060395%40gmail.com"
                   className="text-2xl xs:text-xl border px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30"
