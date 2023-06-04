@@ -69,7 +69,7 @@ export default function Header({ m }) {
           }}
         />
       ))}
-      <m.div className="relative z-10 h-screen grid place-items-center text-center font-alice backdrop-filter backdrop-brightness-[.90] text-primary antialiased">
+      <m.div className="relative z-10 h-[100dvh] grid place-items-center text-center font-alice backdrop-filter backdrop-brightness-[.90] text-primary antialiased">
         <div className="w-3/4 py-2 px-2 rounded-lg overflow-hidden">
           <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl">The Wedding Of</m.div>
         </div>
