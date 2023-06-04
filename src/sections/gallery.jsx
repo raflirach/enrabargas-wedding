@@ -69,7 +69,7 @@ export default function Gallery() {
   return (
     <div className="relative" id="gallery">
       <div className="absolute inset-0 bg-fixed bg-cover"></div>
-      <div className="relative z-10 h-[100dvh] px-8 grid place-items-center text-xl italic overflow-hidden">
+      <div className="relative z-10 h-screen px-8 grid place-items-center text-xl italic overflow-hidden">
         {props.map(({ x, y, rot, scale }, i) => (
           <animated.div className={styles.deck} key={i} style={{ x, y }}>
             {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}

@@ -8,7 +8,7 @@ export default function Opening({ handleOnOpen, transition }) {
 
   return (
     <motion.div
-      className="absolute bg-background z-50 h-[100dvh] xs:px-4 px-8 grid place-items-center text-xl max-w-[640px]"
+      className="absolute bg-background z-50 h-screen xs:px-4 px-8 grid place-items-center text-xl max-w-[640px]"
       style={{
         backgroundImage: `url("https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")`,
         backgroundSize: "auto",
