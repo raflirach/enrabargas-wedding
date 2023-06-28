@@ -11,7 +11,6 @@ import { useEffect, useState } from "react";
 const slides = [
   "https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
   "foto/DSC_0172.jpg",
-  "foto/DSC_0038.jpg",
   "foto/DSC_0058.jpg",
   "foto/DSC_0065.jpg",
   "foto/DSC_0072.jpg",
@@ -20,6 +19,15 @@ const slides = [
   "foto/DSC_0044.jpg",
   "foto/DSC_0103.jpg",
   "foto/DSC_0119.jpg",
+  "foto/DSC_3550.jpg",
+  "foto/DSC_3551.jpg",
+  "foto/DSC_3552.jpg",
+  "foto/DSC_3555.jpg",
+  "foto/DSC_3579.jpg",
+  "foto/DSC_3587.jpg",
+  "foto/DSC_3613.jpg",
+  "foto/DSC_3762.jpg",
+  "foto/DSC_3812.jpg",
 ];
 
 export default function Header({ m }) {
@@ -79,7 +87,7 @@ export default function Header({ m }) {
           <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden">R</m.div>
         </div>
         <div className="overflow-hidden">
-          <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">Rafli & Raka</m.div>
+          <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">Rafli & Icha</m.div>
           <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vShowInRight} className="border-b border-primary"></m.div>
           <div className="flex justify-center items-center w-full">
             <div className="py-2">

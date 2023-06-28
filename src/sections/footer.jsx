@@ -14,7 +14,7 @@ export default function Footer({ m }) {
             kedua mempelai.
           </m.div>
           <m.div custom={3} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-sm my-4 italic"> Hormat Kami </m.div>
-          <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom}className="text-xl"> Rafli & Raka </m.div>
+          <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom}className="text-xl"> Rafli & Icha </m.div>
         </m.div>
       </div>
     </div>

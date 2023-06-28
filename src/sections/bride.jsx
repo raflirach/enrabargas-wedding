@@ -40,12 +40,12 @@ export default function Bride({ m }) {
               <m.div custom={6} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-extrabold text-xl xs:text-lg"
               >
-                Rakananda Alysa Indioka
+                Rafli Rachmawandi
               </m.div>
               <m.div custom={7} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-fira xs:text-sm"
               >
-                Putri dari Mohamad Tasrik & Lilih Lisnawati
+                Putra dari Kamil Johari & Yeni Supriyani
               </m.div>
             </div>
             <div className="text-4xl my-4 flex justify-center items-center gap-4">
@@ -69,12 +69,12 @@ export default function Bride({ m }) {
               <m.div custom={9} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-extrabold text-xl xs:text-lg"
               >
-                Rafli Rachmawandi
+                Rakananda Alysa Indioka
               </m.div>
               <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-fira xs:text-sm"
               >
-                Putra dari Kamil Johari & Yeni Supriyani
+                Putri dari Mohamad Tasrik & Lilih Lisnawati
               </m.div>
             </div>
           </div>
