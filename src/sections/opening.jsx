@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import data from "@/data/wedding-data.json"
 
 export default function Opening({ handleOnOpen, transition }) {
   const router = useRouter()
@@ -10,7 +11,7 @@ export default function Opening({ handleOnOpen, transition }) {
     <motion.div
       className="absolute bg-background z-50 h-screen xs:px-4 px-8 grid place-items-center text-xl max-w-[640px]"
       style={{
-        backgroundImage: `url("https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")`,
+        backgroundImage: `url(${data.images[1]})`,
         backgroundSize: "auto",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

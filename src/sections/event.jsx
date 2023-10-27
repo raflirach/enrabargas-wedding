@@ -1,5 +1,6 @@
 import { vFadeInBottom, vFadeInLeft, vFadeInRight, vScale } from "@/helpers/utils";
 import Link from "next/link";
+import data from "@/data/wedding-data.json"
 
 export default function Event({ m }) {
   return (
@@ -7,7 +8,7 @@ export default function Event({ m }) {
       <div
         className="absolute inset-0 bg-fixed bg-cover"
         style={{
-          backgroundImage: `url("https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")`,
+          backgroundImage: `url(${data.images[1]})`,
           backgroundSize: "auto",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -20,25 +21,23 @@ export default function Event({ m }) {
             <m.img custom={2} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} src="./ring.svg" className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow"/>
             <m.div custom={3} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="mb-1 text-2xl xs:text-xl"> Akad Nikah </m.div>
             <div className="flex justify-evenly w-full items-center">
-              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> Sabtu </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> {data.date.day_text} </m.div>
               <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex flex-col border-r border-l border-primary px-5 w-1/3">
-                <m.div custom={5} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-4xl xs:text-3xl leading-6 xs:leading-4"> 15 </m.div>
-                <m.div custom={6} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl"> 2023 </m.div>
+                <m.div custom={5} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-4xl xs:text-3xl leading-6 xs:leading-4"> {data.date.day} </m.div>
+                <m.div custom={6} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl"> {data.date.year} </m.div>
               </m.div>
-              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="text-xl xs:text-lg w-1/3"> Juli </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="text-xl xs:text-lg w-1/3"> {data.date.month_text} </m.div>
             </div>
-            <m.div custom={7} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-lg xs:text-md font-fira"> 09.00 ~ Selesai </m.div>
-            <m.div custom={8} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="my-2 text-lg xs:text-md"> Alamat </m.div>
-            <m.div custom={9} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-xl xs:text-lg"> Imah Asta </m.div>
-            <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-md xs:text-sm font-fira">
-              Babakan Asta, Bojongloa, Kec. Rancaekek, Kabupaten Bandung, Jawa
-              Barat 40394
+            <m.div custom={7} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-lg xs:text-md font-fira"> {data.date.akad_time} </m.div>
+            <m.div custom={8} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-xl xs:text-lg"> Alamat </m.div>
+            <m.div custom={9} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-md xs:text-sm font-fira">
+              {data.address}
             </m.div>
             <Link
               href="https://goo.gl/maps/gQqrnGf6fYyN2vc97"
               className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
             >
-              <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex justify-center items-center gap-1">
+              <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex justify-center items-center gap-1">
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -61,25 +60,23 @@ export default function Event({ m }) {
             <m.img custom={2} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} src="./rose.svg" className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow" />
             <m.div custom={3} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="mb-1 text-2xl xs:text-xl"> Resepsi </m.div>
             <div className="flex justify-evenly w-full items-center">
-              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> Sabtu </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> {data.date.day_text} </m.div>
               <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex flex-col border-r border-l border-primary px-5 w-1/3" >
-                <m.div custom={5} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-4xl xs:text-3xl leading-6 xs:leading-4"> 15 </m.div>
-                <m.div custom={6} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl"> 2023 </m.div>
+                <m.div custom={5} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-4xl xs:text-3xl leading-6 xs:leading-4"> {data.date.day} </m.div>
+                <m.div custom={6} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl"> {data.date.year} </m.div>
               </m.div>
-              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="text-xl xs:text-lg w-1/3"> Juli </m.div>
+              <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="text-xl xs:text-lg w-1/3"> {data.date.month_text} </m.div>
             </div>
-            <m.div custom={7} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-lg xs:text-md font-fira"> 11.00 ~ 14.00 </m.div>
-            <m.div custom={8} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="my-2 text-lg xs:text-md"> Alamat </m.div>
-            <m.div custom={9} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-xl xs:text-lg"> Imah Asta </m.div>
-            <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-md xs:text-sm font-fira">
-              Babakan Asta, Bojongloa, Kec. Rancaekek, Kabupaten Bandung, Jawa
-              Barat 40394
+            <m.div custom={7} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-lg xs:text-md font-fira"> {data.date.resepsi_time} </m.div>
+            <m.div custom={8} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-xl xs:text-lg"> Alamat </m.div>
+            <m.div custom={9} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-md xs:text-sm font-fira">
+            {data.address}
             </m.div>
             <Link
               href="https://goo.gl/maps/gQqrnGf6fYyN2vc97"
               className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
             >
-              <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex justify-center items-center gap-1">
+              <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex justify-center items-center gap-1">
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"

@@ -7,28 +7,9 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import data from "@/data/wedding-data.json"
 
-const slides = [
-  "https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-  "foto/DSC_0172.jpg",
-  "foto/DSC_0058.jpg",
-  "foto/DSC_0065.jpg",
-  "foto/DSC_0072.jpg",
-  "foto/DSC_0142.jpg",
-  "foto/DSC_0198.jpg",
-  "foto/DSC_0044.jpg",
-  "foto/DSC_0103.jpg",
-  "foto/DSC_0119.jpg",
-  "foto/DSC_3550.jpg",
-  "foto/DSC_3551.jpg",
-  "foto/DSC_3552.jpg",
-  "foto/DSC_3555.jpg",
-  "foto/DSC_3579.jpg",
-  "foto/DSC_3587.jpg",
-  "foto/DSC_3613.jpg",
-  "foto/DSC_3762.jpg",
-  "foto/DSC_3812.jpg",
-];
+const slides = data.images;
 
 export default function Header({ m }) {
   const [index, set] = useState(0);
@@ -55,9 +36,9 @@ export default function Header({ m }) {
 
   useEffect(() => {
     setTimeout(() => {
-      const animation = animate(count, 15, { duration: 2 });
-      const animation2 = animate(count2, 7, { duration: 3 });
-      const animation3 = animate(count3, 2023, { duration: 4 });
+      const animation = animate(count, data.date.day, { duration: 2 });
+      const animation2 = animate(count2, data.date.month, { duration: 3 });
+      const animation3 = animate(count3, data.date.year, { duration: 4 });
 
       return [animation.stop, animation2.stop, animation3.stop];
     }, 4000);
@@ -71,7 +52,7 @@ export default function Header({ m }) {
           style={{
             ...style,
             backgroundImage: `url(${slides[i]})`,
-            backgroundSize: "auto 100%",
+            backgroundSize: "100% fit",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
           }}
@@ -82,12 +63,12 @@ export default function Header({ m }) {
           <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl">The Wedding Of</m.div>
         </div>
         <div className="relative flex justify-center items-center">
-          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="absolute text-5xl xs:text-4xl -bottom-2 right-4 overflow-hidden">R</m.div>
+          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="absolute text-5xl xs:text-4xl -bottom-2 right-4 overflow-hidden">{data.groom.initial}</m.div>
           <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="absolute text-7xl xs:text-6xl">/</m.div>
-          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden">R</m.div>
+          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden">{data.bride.initial}</m.div>
         </div>
         <div className="overflow-hidden">
-          <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">Rafli & Icha</m.div>
+          <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">{data.groom.nickname} & {data.bride.nickname}</m.div>
           <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vShowInRight} className="border-b border-primary"></m.div>
           <div className="flex justify-center items-center w-full">
             <div className="py-2">
@@ -98,7 +79,7 @@ export default function Header({ m }) {
               </m.div>
               <m.div custom={14} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}>
                 <Link
-                  href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MDBvaDBwdjEyMGV1Y3NoaTcxdjRjbXE3ODIgcmFmbGkwNjAzOTVAbQ&amp;tmsrc=rafli060395%40gmail.com"
+                  href="#"
                   className="text-2xl xs:text-xl border px-4 py-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30"
                 >
                   Save the date

@@ -1,4 +1,5 @@
 import { vFadeInLeft, vFadeInRight, vFadeInTop, vScale } from "@/helpers/utils";
+import data from "@/data/wedding-data.json"
 
 export default function Bride({ m }) {
   return (
@@ -6,7 +7,7 @@ export default function Bride({ m }) {
       <div
         className="absolute inset-0 bg-fixed bg-cover"
         style={{
-          backgroundImage: `url("https://images.unsplash.com/photo-1631133961299-4bbfedcac74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")`,
+          backgroundImage: `url(${data.images[1]})`,
           backgroundSize: "auto",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -40,12 +41,12 @@ export default function Bride({ m }) {
               <m.div custom={6} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-extrabold text-xl xs:text-lg"
               >
-                Rafli Rachmawandi
+                {data.groom.name}
               </m.div>
               <m.div custom={7} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-fira xs:text-sm"
               >
-                Putra dari Kamil Johari & Yeni Supriyani
+                Putra dari Bapak {data.groom.father} & Ibu {data.groom.mother}
               </m.div>
             </div>
             <div className="text-4xl my-4 flex justify-center items-center gap-4">
@@ -69,12 +70,12 @@ export default function Bride({ m }) {
               <m.div custom={9} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-extrabold text-xl xs:text-lg"
               >
-                Rakananda Alysa Indioka
+                {data.bride.name}
               </m.div>
               <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-fira xs:text-sm"
               >
-                Putri dari Mohamad Tasrik & Lilih Lisnawati
+                Putri dari Bapak {data.bride.father} & Ibu {data.bride.mother}
               </m.div>
             </div>
           </div>

@@ -13,6 +13,7 @@ import {
 } from "@/sections";
 import { motion as m, useCycle } from "framer-motion";
 import { useRef, useState } from "react";
+import data from "@/data/wedding-data.json"
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,7 +85,7 @@ export default function Home() {
               <Bride m={m} />
               <Countdown m={m} />
               <Event m={m} />
-              <Gallery m={m} />
+              { data.show_gallery && <Gallery m={m} /> }
               <Gift m={m} />
               <Footer m={m} />
             </m.div>

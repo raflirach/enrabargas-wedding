@@ -14,15 +14,15 @@ module.exports = {
         xs: {'min': '200px', 'max': '480px'},
       },
       colors: {
-        background: "#7D5A50",
-        primary: "#FCDEC0",
-        secondary: "#B4846C"
+        // background: "#7D5A50",
+        // primary: "#FCDEC0",
+        // secondary: "#B4846C"
         // background: "#810CA8",
         // primary: "#E5B8F4",
         // secondary: "#C147E9"
-        // background: "#343a40",
-        // primary: "#6c757d",
-        // secondary: "#495057"
+        background: "#687EFF",
+        primary: "#B6FFFA",
+        secondary: "#98E4FF"
       },
       fontFamily: {
         alice: ["Alice", "serif"],

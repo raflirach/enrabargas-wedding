@@ -1,0 +1,37 @@
+{
+  "groom": {
+    "name": "Bagus Bargas",
+    "nickname": "Bargas",
+    "initial": "B",
+    "father": "H.uum Umbara (Alm)",
+    "mother": "Yati Herawati"
+  },
+  "bride": {
+    "name": "Erna Yuniana",
+    "nickname": "Erna",
+    "initial": "E",
+    "father": "H.a Abdurachman (Alm)",
+    "mother": "Hj. Siti Aminah (Alm)"
+  },
+  "address": "Kost an Bu Hejo Jl. Bukit Jarian no.37 RT02/11 Kelurahan Hegarmanah Kecamatan Cidadap Kota Bandung",
+  "date": {
+    "full_date": "11 November 2023",
+    "day_text": "Sabtu",
+    "day": 11,
+    "month": 11,
+    "month_text": "November",
+    "year": 2023,
+    "countdown_time": "2023-11-11T09:00:00+07:00",
+    "akad_time": "09:00 - Selesai",
+    "resepsi_time": "10:00 - Selesai"
+  },
+  "show_bank": false,
+  "show_gallery": false,
+  "images": [
+    "https://i.pinimg.com/originals/c7/06/95/c70695bbe1464cf7d9ebb71fb73f9251.jpg",
+    "https://i.pinimg.com/originals/c2/35/2b/c2352b7779a4fcef6d514f17e915aa93.jpg",
+    "https://i.pinimg.com/originals/b5/e7/7c/b5e77c18442856cd211f0c49211a6f45.png",
+    "https://i.pinimg.com/originals/24/7e/e8/247ee8f2931ef4fc1608da6cb58b0f1c.jpg",
+    "https://i.pinimg.com/originals/54/71/53/547153152d424dfad62f98015fce10a8.jpg"
+  ]
+}
