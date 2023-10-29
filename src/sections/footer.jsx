@@ -5,7 +5,15 @@ export default function Footer({ m }) {
   return (
     <div className="relative">
       {data.show_gallery ? (
-        <div className="absolute inset-0 bg-fixed bg-cover"></div>
+        <div
+          className="absolute inset-0 bg-fixed bg-cover"
+          style={{
+            backgroundImage: `url("https://i.pinimg.com/originals/58/21/ec/5821ec3fa84c3512776054ede194f437.jpg")`,
+            backgroundSize: "fit auto",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        ></div>
       ) : (
         <div
           className="absolute inset-0 bg-fixed bg-cover"
@@ -66,7 +74,37 @@ export default function Footer({ m }) {
             className="text-xl"
           >
             {" "}
-            {data.groom.nickname} & {data.bride.nickname}{" "}
+            {data.bride.nickname} & {data.groom.nickname}{" "}
+          </m.div>
+          <m.div
+            custom={5}
+            initial="init"
+            whileInView="anim"
+            viewport={{ once: true }}
+            variants={vFadeInBottom}
+            className="text-sm font-bold mt-4 italic"
+          >
+            Turut Mengundang
+          </m.div>
+          <m.div
+            custom={6}
+            initial="init"
+            whileInView="anim"
+            viewport={{ once: true }}
+            variants={vFadeInBottom}
+            className="text-sm"
+          >
+            Bapak Adang Ijip
+          </m.div>
+          <m.div
+            custom={6}
+            initial="init"
+            whileInView="anim"
+            viewport={{ once: true }}
+            variants={vFadeInBottom}
+            className="text-sm"
+          >
+            Feri Kurniawan
           </m.div>
         </m.div>
       </div>

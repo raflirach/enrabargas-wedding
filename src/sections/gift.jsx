@@ -91,7 +91,7 @@ export default function Gift({ m }) {
                   whileInView="anim"
                   viewport={{ once: true }}
                   variants={vScale}
-                  src="./bca.svg"
+                  src={`./${data.bank_accounts.account_provider1}.svg`}
                   className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse"
                 />
                 <m.div
@@ -103,7 +103,7 @@ export default function Gift({ m }) {
                   className="text-md font-fira xs:text-sm"
                 >
                   {" "}
-                  a/n Rafli Rachmawandi{" "}
+                  a/n {data.bank_accounts.account_name1}{" "}
                 </m.div>
                 <m.div
                   custom={7}
@@ -114,7 +114,7 @@ export default function Gift({ m }) {
                   className="mb-1 text-lg xs:text-sm"
                 >
                   {" "}
-                  2832342361{" "}
+                  {data.bank_accounts.account_no1}{" "}
                 </m.div>
                 <button
                   className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
@@ -172,7 +172,7 @@ export default function Gift({ m }) {
                   whileInView="anim"
                   viewport={{ once: true }}
                   variants={vScale}
-                  src="./bca.svg"
+                  src={`./${data.bank_accounts.account_provider2}.svg`}
                   className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse"
                 />
                 <m.div
@@ -184,7 +184,7 @@ export default function Gift({ m }) {
                   className="text-md font-fira xs:text-sm"
                 >
                   {" "}
-                  a/n Rakananda Alysa{" "}
+                  a/n {data.bank_accounts.account_name2}{" "}
                 </m.div>
                 <m.div
                   custom={7}
@@ -195,7 +195,7 @@ export default function Gift({ m }) {
                   className="mb-1 text-lg xs:text-sm"
                 >
                   {" "}
-                  7401814837{" "}
+                  {data.bank_accounts.account_no2}{" "}
                 </m.div>
                 <button
                   className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"

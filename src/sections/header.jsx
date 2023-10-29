@@ -68,7 +68,7 @@ export default function Header({ m }) {
           <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden">{data.bride.initial}</m.div>
         </div>
         <div className="overflow-hidden">
-          <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">{data.groom.nickname} & {data.bride.nickname}</m.div>
+          <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">{data.bride.nickname} & {data.groom.nickname}</m.div>
           <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vShowInRight} className="border-b border-primary"></m.div>
           <div className="flex justify-center items-center w-full">
             <div className="py-2">

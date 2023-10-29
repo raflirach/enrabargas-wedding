@@ -3,7 +3,15 @@ import { vScale } from "@/helpers/utils";
 export default function SubHeader({ m }) {
   return (
     <div className="relative">
-      <div className="absolute inset-0 bg-fixed bg-cover"></div>
+      <div
+          className="absolute inset-0 bg-fixed bg-cover"
+          style={{
+            backgroundImage: `url("https://i.pinimg.com/originals/58/21/ec/5821ec3fa84c3512776054ede194f437.jpg")`,
+            backgroundSize: "fit auto",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        ></div>
       <m.div className="relative z-10 py-20 px-8 xs:px-4 grid place-items-center text-xl xs:text-lg italic">
         <m.div custom={0} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="p-8 xs:p-6 relative bg-primary text-background">
           <m.div custom={1} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="w-full h-full border-2 border-secondary absolute top-2 left-2"/>

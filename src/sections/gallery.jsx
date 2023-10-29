@@ -1,28 +1,11 @@
 import { useState } from "react";
 import { useSprings, animated, to as interpolate } from "@react-spring/web";
 import { useDrag } from "react-use-gesture";
+import data from "@/data/wedding-data.json";
 
 import styles from "../styles/gallery.module.css";
 
-const cards = [
-  "foto/DSC_3812.jpg",
-  "foto/DSC_3762.jpg",
-  "foto/DSC_3613.jpg",
-  "foto/DSC_3587.jpg",
-  "foto/DSC_3579.jpg",
-  "foto/DSC_3555.jpg",
-  "foto/DSC_3552.jpg",
-  "foto/DSC_3551.jpg",
-  "foto/DSC_0119.jpg",
-  "foto/DSC_0103.jpg",
-  "foto/DSC_0044.jpg",
-  "foto/DSC_0198.jpg",
-  "foto/DSC_0142.jpg",
-  "foto/DSC_0072.jpg",
-  "foto/DSC_0065.jpg",
-  "foto/DSC_0058.jpg",
-  "foto/DSC_0172.jpg",
-];
+const cards = data.photos;
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i) => ({
@@ -75,7 +58,15 @@ export default function Gallery() {
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return (
     <div className="relative" id="gallery">
-      <div className="absolute inset-0 bg-fixed bg-cover"></div>
+      <div
+          className="absolute inset-0 bg-fixed bg-cover"
+          style={{
+            backgroundImage: `url("https://i.pinimg.com/originals/58/21/ec/5821ec3fa84c3512776054ede194f437.jpg")`,
+            backgroundSize: "fit auto",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        ></div>
       <div className="relative z-10 h-screen px-8 grid place-items-center text-xl italic overflow-hidden">
         {props.map(({ x, y, rot, scale }, i) => (
           <animated.div className={styles.deck} key={i} style={{ x, y }}>

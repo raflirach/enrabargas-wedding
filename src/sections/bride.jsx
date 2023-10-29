@@ -41,12 +41,12 @@ export default function Bride({ m }) {
               <m.div custom={6} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-extrabold text-xl xs:text-lg"
               >
-                {data.groom.name}
+                {data.bride.name}
               </m.div>
               <m.div custom={7} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-fira xs:text-sm"
               >
-                Putra dari Bapak {data.groom.father} & Ibu {data.groom.mother}
+                Putra dari Bapak {data.bride.father} & Ibu {data.bride.mother}
               </m.div>
             </div>
             <div className="text-4xl my-4 flex justify-center items-center gap-4">
@@ -70,12 +70,12 @@ export default function Bride({ m }) {
               <m.div custom={9} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-extrabold text-xl xs:text-lg"
               >
-                {data.bride.name}
+                {data.groom.name}
               </m.div>
               <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop}
                 className="font-fira xs:text-sm"
               >
-                Putri dari Bapak {data.bride.father} & Ibu {data.bride.mother}
+                Putri dari Bapak {data.groom.father} & Ibu {data.groom.mother}
               </m.div>
             </div>
           </div>

@@ -25,13 +25,35 @@
     "akad_time": "09:00 - Selesai",
     "resepsi_time": "10:00 - Selesai"
   },
-  "show_bank": false,
-  "show_gallery": false,
+  "show_bank": true,
+  "show_gallery": true,
   "images": [
-    "https://i.pinimg.com/originals/c7/06/95/c70695bbe1464cf7d9ebb71fb73f9251.jpg",
+    "/foto/1.jpeg",
     "https://i.pinimg.com/originals/c2/35/2b/c2352b7779a4fcef6d514f17e915aa93.jpg",
+    "/foto/2.jpeg",
+    "https://i.pinimg.com/originals/c7/06/95/c70695bbe1464cf7d9ebb71fb73f9251.jpg",
+    "/foto/3.jpeg",
     "https://i.pinimg.com/originals/b5/e7/7c/b5e77c18442856cd211f0c49211a6f45.png",
+    "/foto/4.jpeg",
     "https://i.pinimg.com/originals/24/7e/e8/247ee8f2931ef4fc1608da6cb58b0f1c.jpg",
-    "https://i.pinimg.com/originals/54/71/53/547153152d424dfad62f98015fce10a8.jpg"
-  ]
+    "/foto/5.jpeg",
+    "https://i.pinimg.com/originals/54/71/53/547153152d424dfad62f98015fce10a8.jpg",
+    "/foto/6.jpeg"
+  ],
+  "photos": [
+    "/foto/1.jpeg",
+    "/foto/2.jpeg",
+    "/foto/3.jpeg",
+    "/foto/4.jpeg",
+    "/foto/5.jpeg",
+    "/foto/6.jpeg"
+  ],
+  "bank_accounts": {
+    "account_no1": "7771352646",
+    "account_name1": "Bagus Bargas",
+    "account_provider1": "bca",
+    "account_no2": "076101000756508",
+    "account_name2": "Erna Yuniana",
+    "account_provider2": "bri"
+  }
 }
