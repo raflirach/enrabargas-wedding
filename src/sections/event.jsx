@@ -34,7 +34,7 @@ export default function Event({ m }) {
               {data.address}
             </m.div>
             <Link
-              href="https://goo.gl/maps/gQqrnGf6fYyN2vc97"
+              href={data.map_url}
               className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
             >
               <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex justify-center items-center gap-1">
@@ -73,7 +73,7 @@ export default function Event({ m }) {
             {data.address}
             </m.div>
             <Link
-              href="https://goo.gl/maps/gQqrnGf6fYyN2vc97"
+              href={data.map_url}
               className="text-sm xs:text-xs border mt-4 p-2 border-primary hover:backdrop-sepia-0 hover:bg-white/30 z-10"
             >
               <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="flex justify-center items-center gap-1">

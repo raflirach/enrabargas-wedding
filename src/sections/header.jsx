@@ -63,9 +63,9 @@ export default function Header({ m }) {
           <m.div custom={10} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="text-2xl xs:text-xl">The Wedding Of</m.div>
         </div>
         <div className="relative flex justify-center items-center">
-          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="absolute text-5xl xs:text-4xl -bottom-2 right-4 overflow-hidden">{data.groom.initial}</m.div>
+          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="absolute text-5xl xs:text-4xl -bottom-2 right-4 overflow-hidden">{data.bride.initial}</m.div>
           <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="absolute text-7xl xs:text-6xl">/</m.div>
-          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden">{data.bride.initial}</m.div>
+          <m.div custom={11} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInLeft} className="absolute text-5xl xs:text-4xl top-0 left-4 overflow-hidden">{data.groom.initial}</m.div>
         </div>
         <div className="overflow-hidden">
           <m.div custom={12} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInTop} className="text-4xl xs:text-3xl mb-2">{data.bride.nickname} & {data.groom.nickname}</m.div>

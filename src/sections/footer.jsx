@@ -82,30 +82,86 @@ export default function Footer({ m }) {
             whileInView="anim"
             viewport={{ once: true }}
             variants={vFadeInBottom}
-            className="text-sm font-bold mt-4 italic"
+            className="text-lg font-bold mt-4 italic"
           >
             Turut Mengundang
           </m.div>
-          <m.div
-            custom={6}
-            initial="init"
-            whileInView="anim"
-            viewport={{ once: true }}
-            variants={vFadeInBottom}
-            className="text-sm"
-          >
-            Bapak Adang Ijip
-          </m.div>
-          <m.div
-            custom={6}
-            initial="init"
-            whileInView="anim"
-            viewport={{ once: true }}
-            variants={vFadeInBottom}
-            className="text-sm"
-          >
-            Feri Kurniawan
-          </m.div>
+          <div className="grid grid-cols-2 place-content-start pt-2">
+            <div className="">
+              <m.div
+                custom={6}
+                initial="init"
+                whileInView="anim"
+                viewport={{ once: true }}
+                variants={vFadeInBottom}
+                className="text-sm font-bold mt-4 italic"
+              >
+                Pihak Pengantin Perempuan:
+              </m.div>
+              <m.div
+                custom={6}
+                initial="init"
+                whileInView="anim"
+                viewport={{ once: true }}
+                variants={vFadeInBottom}
+                className="text-sm"
+              >
+                Agus Gunarsa
+              </m.div>
+              <m.div
+                custom={6}
+                initial="init"
+                whileInView="anim"
+                viewport={{ once: true }}
+                variants={vFadeInBottom}
+                className="text-sm"
+              >
+                Asep Supriatna
+              </m.div>
+              <m.div
+                custom={6}
+                initial="init"
+                whileInView="anim"
+                viewport={{ once: true }}
+                variants={vFadeInBottom}
+                className="text-sm"
+              >
+                Rahmat Gunawan
+              </m.div>
+            </div>
+            <div>
+              <m.div
+                custom={6}
+                initial="init"
+                whileInView="anim"
+                viewport={{ once: true }}
+                variants={vFadeInBottom}
+                className="text-sm font-bold mt-4 italic"
+              >
+                Pihak Pengantin Laki-laki:
+              </m.div>
+              <m.div
+                custom={6}
+                initial="init"
+                whileInView="anim"
+                viewport={{ once: true }}
+                variants={vFadeInBottom}
+                className="text-sm"
+              >
+                Bapak Adang Ijip
+              </m.div>
+              <m.div
+                custom={6}
+                initial="init"
+                whileInView="anim"
+                viewport={{ once: true }}
+                variants={vFadeInBottom}
+                className="text-sm"
+              >
+                Feri Kurniawan
+              </m.div>
+            </div>
+          </div>
         </m.div>
       </div>
     </div>
