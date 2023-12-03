@@ -18,7 +18,7 @@ export default function Event({ m }) {
         <div>
           <m.div custom={0} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="relative flex flex-col justify-center items-center p-8 backdrop-filter bg-background/40 backdrop-brightness-[.75] mb-2">
             <m.div custom={1} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="absolute border-2 border-solid w-full h-full -top-2 -left-2 border-primary"/>
-            <m.img custom={2} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} src="./ring.svg" className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow"/>
+            <m.img custom={2} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} src={`./theme/${data.theme}/ring.svg`} className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow"/>
             <m.div custom={3} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="mb-1 text-2xl xs:text-xl"> Akad Nikah </m.div>
             <div className="flex justify-evenly w-full items-center">
               <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> {data.date.day_text} </m.div>
@@ -57,7 +57,7 @@ export default function Event({ m }) {
           </m.div>
           <m.div custom={0} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="relative flex flex-col justify-center items-center p-8 backdrop-filter bg-background/40 backdrop-brightness-[.75]">
             <m.div custom={1} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} className="absolute border-2 border-solid w-full h-full top-2 left-2 border-primary" />
-            <m.img custom={2} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} src="./rose.svg" className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow" />
+            <m.img custom={2} initial="init" whileInView="anim" viewport={{ once: true }} variants={vScale} src={`./theme/${data.theme}/rose.svg`} className="h-14 w-14 xs:h-10 xs:w-10 mb-4 animate-bounce-slow" />
             <m.div custom={3} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInBottom} className="mb-1 text-2xl xs:text-xl"> Resepsi </m.div>
             <div className="flex justify-evenly w-full items-center">
               <m.div custom={4} initial="init" whileInView="anim" viewport={{ once: true }} variants={vFadeInRight} className="text-xl xs:text-lg w-1/3"> {data.date.day_text} </m.div>

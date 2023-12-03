@@ -91,7 +91,7 @@ export default function Gift({ m }) {
                   whileInView="anim"
                   viewport={{ once: true }}
                   variants={vScale}
-                  src={`./${data.bank_accounts.account_provider1}.svg`}
+                  src={`./theme/${data.theme}/${data.bank_accounts.account_provider1}.svg`}
                   className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse"
                 />
                 <m.div
@@ -172,7 +172,7 @@ export default function Gift({ m }) {
                   whileInView="anim"
                   viewport={{ once: true }}
                   variants={vScale}
-                  src={`./${data.bank_accounts.account_provider2}.svg`}
+                  src={`./theme/${data.theme}/${data.bank_accounts.account_provider2}.svg`}
                   className="h-20 w-20 xs:h-16 xs:w-16 animate-pulse"
                 />
                 <m.div

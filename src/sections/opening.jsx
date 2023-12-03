@@ -24,7 +24,7 @@ export default function Opening({ handleOnOpen, transition }) {
         <div className="text-xl my-2 font-alice font-bold">{tm ? tm : 'Tamu Undangan'}</div>
         <div className="flex justify-center items-center">
           <img
-            src="./love-latter.svg"
+            src={`./theme/${data.theme}/love-latter.svg`}
             className="h-20 w-20 mb-4 animate-bounce-slow"
           />
         </div>
